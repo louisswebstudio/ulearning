@@ -1,0 +1,6 @@
+# OS / editor
+Thumbs.db
+.DS_Store
+desktop.ini
+.vscode/
+__pycache__/
