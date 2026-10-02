@@ -17,6 +17,10 @@ HOME = SITE / "index.html"
 
 FLAGS = {
     "en": '<clipPath id="f-en"><circle cx="30" cy="30" r="30"/></clipPath><g clip-path="url(#f-en)"><rect width="60" height="60" fill="#012169"/><path d="M0 0L60 60M60 0L0 60" stroke="#fff" stroke-width="12"/><path d="M0 0L60 60M60 0L0 60" stroke="#C8102E" stroke-width="4"/><path d="M30 0V60M0 30H60" stroke="#fff" stroke-width="18"/><path d="M30 0V60M0 30H60" stroke="#C8102E" stroke-width="10"/></g>',
+    "fr": '<clipPath id="f-fr"><circle cx="30" cy="30" r="30"/></clipPath><g clip-path="url(#f-fr)"><rect width="20" height="60" fill="#0055A4"/><rect x="20" width="20" height="60" fill="#fff"/><rect x="40" width="20" height="60" fill="#EF4135"/></g>',
+    "de": '<clipPath id="f-de"><circle cx="30" cy="30" r="30"/></clipPath><g clip-path="url(#f-de)"><rect width="60" height="20" fill="#000"/><rect y="20" width="60" height="20" fill="#DD0000"/><rect y="40" width="60" height="20" fill="#FFCE00"/></g>',
+    "es": '<clipPath id="f-es"><circle cx="30" cy="30" r="30"/></clipPath><g clip-path="url(#f-es)"><rect width="60" height="60" fill="#AA151B"/><rect y="15" width="60" height="30" fill="#F1BF00"/></g>',
+    "it": '<clipPath id="f-it"><circle cx="30" cy="30" r="30"/></clipPath><g clip-path="url(#f-it)"><rect width="20" height="60" fill="#009246"/><rect x="20" width="20" height="60" fill="#fff"/><rect x="40" width="20" height="60" fill="#CE2B37"/></g>',
 }
 
 # CEFR levels (standard scale; official French level names).
@@ -45,6 +49,9 @@ SHELL = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
+<link rel="icon" href="{p}favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="{p}assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="{p}assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="{p}assets/css/style.css">
 </head>
 <body>
@@ -140,12 +147,16 @@ def lis(items):
 # ---------------------------------------------------------------------------
 def course_body(c):
     levels = ""
+    steps = c.get("steps")
     if c.get("levels"):
+        steps = ("Les niveaux", "Nos niveaux suivent le Cadre européen commun de référence pour les langues (CECRL).", LEVELS)
+    if steps:
+        h, intro, rows = steps
         levels = f"""
-      <h2 class="course__h">Les niveaux</h2>
-      <p class="course__p">Nos niveaux suivent le Cadre européen commun de référence pour les langues (CECRL).</p>
+      <h2 class="course__h">{h}</h2>
+      <p class="course__p">{intro}</p>
       <ol class="levels">{"".join(f'''
-        <li class="level"><span class="level__code">{a}</span><span class="level__name">{b}</span><span class="level__text">{t}</span></li>''' for a, b, t in LEVELS)}
+        <li class="level"><span class="level__code">{a}</span><span class="level__name">{b}</span><span class="level__text">{t}</span></li>''' for a, b, t in rows)}
       </ol>
 """
     side = "".join(f'\n          <li><span class="side-ico side-ico--{i}"></span>{t}</li>' for i, t in c["side"])
@@ -199,8 +210,70 @@ ENGLISH = {
     "cta": "Prêt à parler anglais ?",
 }
 
+def language(code, name, noun, photo, about, learn, who, cta):
+    """Language page data, same structure as ENGLISH."""
+    return {
+        "label": "Nos langues", "name": name, "tint": code, "levels": True,
+        "meta": [f'<svg class="flag flag--sm" viewBox="0 0 60 60" aria-hidden="true">{FLAGS[code]}</svg> Cours {noun}', "Niveaux A1 → C1", "Groupes &amp; individuels"],
+        "photo": photo, "about": about, "learn": learn, "who": who,
+        "side_label": f"Cours {noun}", "side_big": "A1 → C1",
+        "side": ENGLISH["side"], "cta": cta,
+    }
+
+
+FRANCAIS = language(
+    "fr", "Français", "de français", "Photo : un cours de français chez UTALK",
+    "Le français de tous les jours et le français professionnel. Que vous partiez de zéro ou que vous vouliez reprendre le français appris à l’école, nos professeurs vous font parler dès la première séance.",
+    ["Tenir une conversation fluide sur la vie de tous les jours",
+     "Écrire avec assurance : e-mails, rapports, lettres",
+     "Utiliser le français au travail : réunions, entretiens, présentations",
+     "Prendre la parole sans stress grâce aux séances au TalkLab"],
+    ["Étudiants qui suivent ou préparent des études en français",
+     "Professionnels qui travaillent en français au quotidien",
+     "Personnes qui préparent un projet au Canada ou en France"],
+    "Prêt à parler français&nbsp;?")
+
+DEUTSCH = language(
+    "de", "Deutsch", "d’allemand", "Photo : un cours d’allemand chez UTALK",
+    "Pour étudier, travailler ou partir en Allemagne, en partant de zéro. Nos cours d’allemand vous donnent des bases solides et vous font pratiquer l’oral à chaque séance.",
+    ["Comprendre et utiliser l’allemand du quotidien",
+     "Gérer les démarches de la vie sur place : visa, logement, travail",
+     "Maîtriser les bases de la grammaire allemande, pas à pas",
+     "Prendre la parole sans stress grâce aux séances au TalkLab"],
+    ["Futurs étudiants et candidats à une Ausbildung",
+     "Professionnels qui visent un poste en Allemagne",
+     "Personnes qui préparent leur installation à l’étranger"],
+    "Prêt à parler allemand&nbsp;?")
+
+ESPANOL = language(
+    "es", "Español", "d’espagnol", "Photo : un cours d’espagnol chez UTALK",
+    "Une langue parlée sur quatre continents, et rapide à prendre en main quand on parle déjà français. Nos cours d’espagnol vous font parler très vite, avec plaisir.",
+    ["Tenir une conversation en espagnol très rapidement",
+     "Comprendre les différents accents d’Espagne et d’Amérique latine",
+     "Utiliser l’espagnol en voyage, au travail ou pour vos études",
+     "Prendre la parole sans stress grâce aux séances au TalkLab"],
+    ["Voyageurs qui veulent échanger sur place",
+     "Étudiants qui ajoutent une langue à leur parcours",
+     "Professionnels en contact avec des clients hispanophones"],
+    "¿Listo? Prêt à parler espagnol&nbsp;?")
+
+ITALIANO = language(
+    "it", "Italiano", "d’italien", "Photo : un cours d’italien chez UTALK",
+    "La langue de l’art, de la mode et de la cuisine. Pour vos études en Italie, vos voyages ou par passion, nos cours d’italien vous font parler dès la première séance.",
+    ["Tenir une conversation en italien sur la vie de tous les jours",
+     "Comprendre l’italien parlé, à un rythme naturel",
+     "Découvrir la culture italienne à travers la langue",
+     "Prendre la parole sans stress grâce aux séances au TalkLab"],
+    ["Futurs étudiants en Italie",
+     "Passionnés de culture italienne",
+     "Voyageurs qui veulent profiter pleinement de l’Italie"],
+    "Prêt à parler italien&nbsp;?")
+
+
+PROG_LABEL = '<a href="programmes.html">Nos programmes</a>'
+
 PROG_LANGUES = {
-    "label": "Nos programmes", "name": "Cours de langues", "tint": "fr", "levels": True,
+    "label": PROG_LABEL, "name": "Cours de langues", "tint": "fr", "levels": True,
     "meta": ["5 langues", "Niveaux A1 → C1", "En groupe"],
     "photo": "Photo : un cours en groupe chez UTALK",
     "about": "Le programme principal d’UTALK : des cours en groupe pour apprendre l’anglais, le français, l’allemand, l’espagnol ou l’italien, du niveau débutant au niveau avancé, avec l’oral au centre de chaque séance.",
@@ -216,6 +289,201 @@ PROG_LANGUES = {
              ("chat", "Pratique orale au TalkLab"), ("pin", "Centre-ville, Casablanca")],
     "cta": "Prêt à commencer ?",
 }
+
+
+PROG_SPEAKING = {
+    "label": PROG_LABEL, "name": "Communication &amp; Speaking", "tint": "en",
+    "meta": ["Expression orale", "Tous niveaux à partir de A2", "Ateliers en groupe"],
+    "photo": "Photo : atelier de prise de parole",
+    "about": "Des ateliers pour gagner en aisance à l’oral : prise de parole, débats et mises en situation. Moins de théorie, plus de pratique : vous parlez, on vous fait progresser.",
+    "learn": ["Prendre la parole en public sans stress",
+              "Structurer vos idées et convaincre",
+              "Débattre, répondre et rebondir dans une conversation",
+              "Réussir un entretien, une réunion ou une présentation"],
+    "steps": ("Comment se passe un atelier", "Chaque atelier suit la méthode UTALK : apprendre, pratiquer, parler, progresser.", [
+        ("01", "Échauffement", "Quelques minutes pour se mettre en confiance et lancer la conversation."),
+        ("02", "Mise en situation", "Un thème, un rôle, un objectif : entretien, réunion, débat ou présentation."),
+        ("03", "Prise de parole", "Chacun parle, devant le groupe, à son niveau et à son rythme."),
+        ("04", "Feedback", "Des retours concrets du professeur pour progresser dès l’atelier suivant."),
+    ]),
+    "who": ["Professionnels qui veulent briller en réunion ou en entretien",
+            "Étudiants qui préparent un oral, un exposé ou une soutenance",
+            "Toute personne qui comprend la langue mais bloque au moment de parler"],
+    "side_label": "Programme", "side_big": "Expression orale",
+    "side": [("group", "Ateliers en groupe"), ("clock", "Horaires : à confirmer"),
+             ("chat", "En lien avec le TalkLab"), ("pin", "Centre-ville, Casablanca")],
+    "cta": "Prêt à prendre la parole&nbsp;?",
+}
+
+PROG_INTENSIFS = {
+    "label": PROG_LABEL, "name": "Cours intensifs", "tint": "de",
+    "meta": ["Progression rapide", "5 langues", "Groupes &amp; individuels"],
+    "photo": "Photo : session intensive",
+    "about": "Un rythme soutenu pour progresser vite, avant un examen, un voyage ou un nouveau poste. Plus d’heures par semaine, un objectif clair, et l’oral toujours au centre.",
+    "learn": ["Gagner un niveau en peu de temps",
+              "Vous préparer à une échéance précise : examen, entretien, départ",
+              "Mémoriser le vocabulaire utile à votre objectif",
+              "Parler avec plus d’assurance grâce à la pratique quotidienne"],
+    "steps": ("Comment ça marche", "Un parcours court et cadré, construit autour de votre objectif.", [
+        ("01", "Test de niveau", "On fait le point sur votre niveau à l’oral et à l’écrit."),
+        ("02", "Objectif &amp; planning", "On fixe ensemble l’objectif, la durée et le rythme des séances."),
+        ("03", "Sessions intensives", "Des séances rapprochées, avec beaucoup de pratique orale."),
+        ("04", "Bilan final", "On mesure vos progrès et on vous conseille pour la suite."),
+    ]),
+    "who": ["Candidats à un examen ou à des études à l’étranger",
+            "Professionnels qui ont un nouveau poste ou une mission",
+            "Personnes qui partent bientôt en voyage ou s’installent à l’étranger"],
+    "side_label": "Programme", "side_big": "Intensif",
+    "side": [("sparkle", "Rythme soutenu"), ("calendar", "Durée et horaires : à confirmer"),
+             ("group", "En groupe ou en individuel"), ("chat", "Pratique orale au TalkLab"),
+             ("pin", "Centre-ville, Casablanca")],
+    "cta": "Prêt à accélérer&nbsp;?",
+}
+
+PROG_INDIVIDUELS = {
+    "label": PROG_LABEL, "name": "Cours individuels", "tint": "it",
+    "meta": ["1 : 1 · Sur mesure", "5 langues", "Tous niveaux A1 → C1"],
+    "photo": "Photo : cours particulier",
+    "about": "Un professeur rien que pour vous, avec un programme et des horaires adaptés à vos objectifs. Vous avancez à votre rythme, et chaque minute du cours est consacrée à vos besoins.",
+    "learn": ["Ce dont vous avez besoin : quotidien, travail, études ou examen",
+              "Corriger vos propres erreurs, avec une attention personnelle",
+              "Parler davantage, car tout le cours est pour vous",
+              "Avancer à votre rythme, plus vite ou plus lentement selon vos besoins"],
+    "steps": ("Comment ça marche", "Un cours construit pour vous, du premier échange au suivi.", [
+        ("01", "Premier échange", "On parle de vos objectifs, de votre niveau et de vos disponibilités."),
+        ("02", "Programme sur mesure", "Votre professeur prépare un programme adapté à votre objectif."),
+        ("03", "Cours 1 : 1", "Des séances en tête-à-tête, centrées sur l’oral et sur vos besoins."),
+        ("04", "Suivi &amp; ajustements", "On mesure vos progrès et on ajuste le programme en continu."),
+    ]),
+    "who": ["Professionnels avec un emploi du temps chargé ou irrégulier",
+            "Personnes avec un objectif précis : examen, entretien, départ à l’étranger",
+            "Personnes qui préfèrent apprendre sans groupe, à leur rythme"],
+    "side_label": "Programme", "side_big": "1 : 1",
+    "side": [("user", "Un professeur pour vous seul"), ("clock", "Horaires flexibles : à confirmer"),
+             ("sparkle", "Programme personnalisé"), ("chat", "Accès au TalkLab"),
+             ("pin", "Centre-ville, Casablanca")],
+    "cta": "Prêt à apprendre à votre rythme&nbsp;?",
+}
+
+# ---------------------------------------------------------------------------
+# Méthode
+# ---------------------------------------------------------------------------
+STEPS = [
+    ("Learn", "en classe", "En classe", "Photo : un cours en petit groupe",
+     "Des cours en petits groupes, avec des professeurs qui adaptent le rythme à votre niveau.",
+     ["Petits groupes, pour que chacun participe",
+      "Un programme par niveau, de A1 à C1 (CECRL)",
+      "Des professeurs qui mettent l’oral au centre du cours"], None),
+    ("Practice", "à chaque séance", "Mises en situation", "Photo : un jeu de rôle en classe",
+     "Jeux, mises en situation et activités pour utiliser la langue tout de suite.",
+     ["Jeux et activités pour retenir sans apprendre par cœur",
+      "Mises en situation : au restaurant, au travail, en voyage",
+      "On utilise ce qu’on vient d’apprendre, dès la même séance"], None),
+    ("Speak", "au TalkLab", "TalkLab", "Photo : une conversation au TalkLab",
+     "Vous échangez dans de vraies conversations et vous prenez confiance à l’oral.",
+     ["Conversations et débats en petits groupes",
+      "Jeux et événements pour parler sans stress",
+      "Ouvert à tous les niveaux"], ("talklab.html", "Découvrir le TalkLab")),
+    ("Improve", "chaque mois", "Suivi mensuel", "Photo : un point de suivi avec un professeur",
+     "Un suivi régulier de vos progrès, pour savoir où vous en êtes et quoi travailler.",
+     ["Un point régulier sur vos progrès",
+      "Des retours concrets de vos professeurs",
+      "Le passage au niveau suivant quand vous êtes prêt"], None),
+]
+
+
+def methode_body():
+    overview = section_from_home("methode").replace("        Notre\n", "        Les 4\n", 1).replace(
+        '<span class="method__word">méthode</span>', '<span class="method__word">étapes</span>', 1)
+    cards = ""
+    for i, (en, when, tag, photo, text, points, link) in enumerate(STEPS, 1):
+        more = f'\n            <a href="{link[0]}" class="prog__more">{link[1]} <span aria-hidden="true">→</span></a>' if link else ""
+        cards += f"""
+      <li class="prog prog--{i}">
+        <div class="prog__card">
+          <svg class="prog__swirl" viewBox="0 0 600 500" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 470 C160 380 330 300 640 140" /><path d="M120 520 C260 430 420 330 640 250" /></svg>
+          <div class="prog__content">
+            <span class="prog__num">0{i}</span>
+            <h3 class="prog__name">{en} — {when}</h3>
+            <p class="prog__text">{text}</p>
+            <ul class="course__list prog__points">{lis(points)}</ul>
+            <span class="prog__tag">{tag}</span>{more}
+          </div>
+          <div class="prog__photo">{ph(photo)}</div>
+        </div>
+      </li>"""
+    swash = '<span class="swash">détail<svg viewBox="0 0 160 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 22 C40 8 110 4 156 12" /></svg></span>'
+    return page_head("Notre méthode", "Learn. Practice. Speak. Improve.",
+                     lead="Moins de théorie, plus de pratique : chaque étape vous rapproche de la vraie conversation.") + f"""
+<!-- ============ 4 STEPS OVERVIEW (ref: Brightpath "How it works", from the home page) ============ -->
+{overview}
+
+<!-- ============ STEPS IN DETAIL (ref: Kidora stacked program cards) ============ -->
+<section class="progs">
+  <div class="container">
+    <div class="progs__head">
+      <div>
+        <p class="label">Étape par étape</p>
+        <h2 class="progs__title">Chaque étape, en {swash}</h2>
+      </div>
+    </div>
+    <ol class="progs__list">{cards}
+    </ol>
+  </div>
+</section>
+
+<!-- ============ ÉTUDIANTS (ref: Kidora photo + quote cards, from the home page) ============ -->
+{section_from_home("etudiants")}
+""" + cta("Prêt à tester la méthode UTALK&nbsp;?")
+
+
+# ---------------------------------------------------------------------------
+# Programmes overview
+# ---------------------------------------------------------------------------
+PROGS = [
+    (1, "fr", "Cours de langues", "programmes/cours-de-langues.html", "Photo : cours en groupe",
+     "Des cours en groupe pour apprendre l’anglais, le français, l’allemand, l’espagnol ou l’italien, du niveau débutant au niveau avancé.",
+     [("sparkle", "A1 → C1"), ("group", "En groupe"), ("chat", "5 langues")]),
+    (2, "en", "Communication &amp; Speaking", "programmes/communication-speaking.html", "Photo : atelier de prise de parole",
+     "Des ateliers pour gagner en aisance à l’oral : prise de parole, débats et mises en situation.",
+     [("chat", "Expression orale"), ("sparkle", "À partir de A2"), ("group", "Ateliers en groupe")]),
+    (3, "de", "Cours intensifs", "programmes/cours-intensifs.html", "Photo : session intensive",
+     "Un rythme soutenu pour progresser vite, avant un examen, un voyage ou un nouveau poste.",
+     [("calendar", "Progression rapide"), ("chat", "5 langues"), ("group", "Groupes &amp; individuels")]),
+    (4, "it", "Cours individuels", "programmes/cours-individuels.html", "Photo : cours particulier",
+     "Un professeur rien que pour vous, avec un programme et des horaires adaptés à vos objectifs.",
+     [("user", "1 : 1 · Sur mesure"), ("chat", "5 langues"), ("sparkle", "A1 → C1")]),
+]
+
+
+def programmes_body():
+    cards = ""
+    for n, tint, name, href, photo, text, meta in PROGS:
+        pills = "".join(f'<li><span class="side-ico side-ico--{i}"></span>{t}</li>' for i, t in meta)
+        cards += f"""
+      <a href="{href}" class="lcard lcard--{tint}">
+        <div class="lcard__media">{ph(photo)}<span class="lcard__badge"><span class="lcard__num lcard__num--{n}">0{n}</span>Programme</span></div>
+        <h2 class="lcard__title">{name}</h2>
+        <p class="lcard__text">{text}</p>
+        <ul class="lcard__meta">{pills}</ul>
+        <span class="lcard__foot">Voir le programme <span class="lcard__go" aria-hidden="true"></span></span>
+      </a>"""
+    return page_head(
+        "Nos programmes",
+        "Choisissez votre programme",
+        "Quatre façons d’apprendre, un même objectif : vous faire parler.",
+    ) + f"""
+<!-- ============ PROGRAMME CARDS (ref: BrightMind "Browse Our Courses" grid, 2 columns) ============ -->
+<section class="lcards-sec">
+  <div class="container lcards lcards--2">{cards}
+      <a href="contact.html" class="lcard lcard--cta">
+        <h2 class="lcard__title">Quel programme choisir&nbsp;?</h2>
+        <p class="lcard__text">Dites-nous votre objectif : on vous conseille le bon programme, la bonne langue et le bon niveau.</p>
+        <span class="lcard__foot">On vous conseille <span class="lcard__go" aria-hidden="true"></span></span>
+      </a>
+  </div>
+</section>
+""" + cta("Prêt à commencer&nbsp;?")
 
 
 # ---------------------------------------------------------------------------
@@ -495,13 +763,173 @@ def contact_body():
 """
 
 
+# ---------------------------------------------------------------------------
+# Expérience (covers = Instagram reel thumbnails, 360x640; swap for originals when the client sends them)
+# ---------------------------------------------------------------------------
+IG = "https://www.instagram.com/utalk_center/"
+CIRCLE = '<svg viewBox="0 0 200 80" preserveAspectRatio="none" aria-hidden="true"><path d="M18 52 C4 30 40 8 104 8 C170 8 198 26 192 46 C186 68 130 76 88 74 C44 72 10 62 12 44 C14 30 40 18 70 14" /></svg>'
+
+XP_FILTERS = [("centre", "UTALK Center"), ("classrooms", "Classrooms"),
+              ("communication", "Communication"), ("activities", "Activities")]
+
+REELS = [
+    ("Dd8u3z4N--g", "activities", "Jeux de société et de cartes autour d’une table"),
+    ("Dd1DMVoNF_K", "communication", "Mise en situation au bureau"),
+    ("DdrEsgFtw_t", "centre", "L’accueil d’UTALK Center"),
+    ("Ddln2h3tY5T", "classrooms", "Une étudiante dans une salle de cours"),
+    ("DdgZwF1tbxp", "centre", "La réception et le logo UTALK"),
+    ("DbDsbRftSWF", "activities", "Un jeu en équipe avec des ballons"),
+    ("DdYjCJtNuX3", "centre", "Visite de l’accueil du centre"),
+    ("DavO0NTNy_q", "classrooms", "Un cours devant l’écran interactif"),
+    ("DXmmpJqDJwf", "communication", "Un étudiant prend la parole"),
+    ("DdTmEAyNO6t", "centre", "L’entrée du centre, au 12e étage"),
+    ("DYj_qf_scYO", "communication", "Une étudiante en salle de cours"),
+    ("DVbeFAijA2A", "centre", "Le couloir et l’espace d’accueil"),
+]
+
+
+def experience_body():
+    labels = dict(XP_FILTERS)
+    filters = "".join(
+        f'\n        <button type="button" class="filter" data-filter="{k}" aria-pressed="false">{v}</button>'
+        for k, v in XP_FILTERS)
+    reels = "".join(
+        f'\n      <li class="tile" data-cat="{cat}"><a class="reel" href="{IG}reel/{rid}/" target="_blank" rel="noopener" '
+        f'aria-label="{alt} (vidéo Instagram)"><img src="assets/img/instagram/{rid}.jpg" alt="" width="361" height="640" loading="lazy">'
+        f'<span class="reel__play" aria-hidden="true"></span><span class="chip">{labels[cat]}</span></a></li>'
+        for rid, cat, alt in REELS)
+    words = "<span>Classrooms</span><i>✦</i><span>Communication</span><i>✦</i><span>TalkLab</span><i>✦</i><span>Activities</span><i>✦</i><span>Events</span><i>✦</i>"
+    return page_head(
+        "Expérience",
+        f'Découvrez l’ambiance <span class="xp__circled">UTALK{CIRCLE}</span>',
+        "Les cours, les ateliers, les jeux et les gens : voici à quoi ressemble la vie au centre.",
+    ) + f"""
+<!-- ============ VIDEO BANNER (ref: Kidora "Discover our learning space") ============ -->
+<section class="xp">
+  <div class="xp__banner">
+    <div class="xp__media ph ph--dark"><span class="ph__icon"></span><span class="ph__label">Vidéo plein écran : visite du centre (fichier original à demander au client)</span></div>
+    <div class="xp__overlay"></div>
+    <div class="container xp__banner-inner">
+      <p class="eyebrow eyebrow--light">✦ Au cœur du centre</p>
+      <h2 class="xp__title">Ici, on apprend en parlant.</h2>
+      <button type="button" class="xp__play" aria-label="Lire la vidéo de présentation"><span class="xp__play-icon" aria-hidden="true"></span>Voir la vidéo</button>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      {words}
+      {words}
+      {words}
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY: Instagram reels, filters as on the home page ============ -->
+<section class="xp">
+  <div class="container xp__gallery">
+    <div class="xp__head">
+      <h2 class="xp__subtitle">Le centre en vidéos</h2>
+      <div class="filters" role="group" aria-label="Filtrer les vidéos">
+        <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Tout</button>{filters}
+      </div>
+    </div>
+    <ul class="tiles tiles--reels">{reels}
+    </ul>
+    <div class="xp__more">
+      <a href="{IG}" class="btn-pill" target="_blank" rel="noopener">Suivez-nous sur Instagram <span class="btn-pill__icon" aria-hidden="true"></span></a>
+    </div>
+  </div>
+</section>
+""" + cta("Envie de vivre l’expérience ?")
+
+
+# ---------------------------------------------------------------------------
+# Langues overview (ref: BrightMind /course listing, 3-column course cards; author + price row -> "Voir le cours")
+# ---------------------------------------------------------------------------
+LANGS = [
+    ("en", "English", "langues/english.html", "Photo : un cours d’anglais",
+     "La langue internationale, pour vos études, votre travail et vos voyages."),
+    ("fr", "Français", "langues/francais.html", "Photo : un cours de français",
+     "Le français de tous les jours et le français professionnel."),
+    ("de", "Deutsch", "langues/deutsch.html", "Photo : un cours d’allemand",
+     "Pour étudier, travailler ou partir en Allemagne."),
+    ("es", "Español", "langues/espanol.html", "Photo : un cours d’espagnol",
+     "Une langue parlée sur quatre continents, à apprendre en parlant."),
+    ("it", "Italiano", "langues/italiano.html", "Photo : un cours d’italien",
+     "La langue de l’art, de la mode et de la cuisine."),
+]
+
+
+def langues_body():
+    meta = ('<ul class="lcard__meta"><li><span class="side-ico side-ico--sparkle"></span>A1 → C1</li>'
+            '<li><span class="side-ico side-ico--group"></span>Groupes &amp; individuels</li>'
+            '<li><span class="side-ico side-ico--chat"></span>TalkLab</li></ul>')
+    cards = "".join(f"""
+      <a href="{href}" class="lcard lcard--{code}">
+        <div class="lcard__media">{ph(photo)}<span class="lcard__badge"><svg class="flag" viewBox="0 0 60 60" aria-hidden="true">{FLAGS[code]}</svg>{code.upper()}</span></div>
+        <h2 class="lcard__title">{name}</h2>
+        <p class="lcard__text">{text}</p>
+        {meta}
+        <span class="lcard__foot">Voir le cours <span class="lcard__go" aria-hidden="true"></span></span>
+      </a>""" for code, name, href, photo, text in LANGS)
+    return page_head(
+        "Nos langues",
+        "Choisissez votre langue",
+        "Cinq langues, cinq niveaux, et toujours le même objectif : vous faire parler.",
+    ) + f"""
+<!-- ============ LANGUAGE CARDS (ref: BrightMind "Browse Our Courses" grid) ============ -->
+<section class="lcards-sec">
+  <div class="container lcards">{cards}
+      <a href="contact.html" class="lcard lcard--cta">
+        <h2 class="lcard__title">Pas sûr de votre niveau&nbsp;?</h2>
+        <p class="lcard__text">Dites-nous où vous en êtes : on vous conseille la bonne langue, le bon niveau et le bon format.</p>
+        <span class="lcard__foot">On vous conseille <span class="lcard__go" aria-hidden="true"></span></span>
+      </a>
+  </div>
+</section>
+""" + cta("Prêt à choisir votre langue&nbsp;?")
+
+
 def main():
+    page("programmes.html", "Nos programmes · UTALK Center",
+         "Les programmes d’UTALK Center à Casablanca : cours de langues, communication &amp; speaking, cours intensifs et cours individuels.",
+         programmes_body())
+    page("methode.html", "Notre méthode · UTALK Center",
+         "La méthode UTALK Center : Learn, Practice, Speak, Improve. Quatre étapes pour parler une langue.",
+         methode_body(), current="methode.html")
+    page("langues.html", "Nos langues · UTALK Center",
+         "Cours d’anglais, de français, d’allemand, d’espagnol et d’italien à Casablanca, du niveau A1 au C1.",
+         langues_body(), current="langues.html")
+    page("experience.html", "Expérience · UTALK Center",
+         "L’expérience UTALK Center en images et en vidéos : cours, ateliers de communication et activités à Casablanca.",
+         experience_body(), current="experience.html")
     page("langues/english.html", "English · UTALK Center",
          "Cours d’anglais à Casablanca chez UTALK Center : niveaux A1 à C1, en groupe ou en individuel.",
-         course_body(ENGLISH), current="index.html#langues")
+         course_body(ENGLISH), current="langues.html")
+    page("langues/francais.html", "Français · UTALK Center",
+         "Cours de français à Casablanca chez UTALK Center : niveaux A1 à C1, en groupe ou en individuel.",
+         course_body(FRANCAIS), current="langues.html")
+    page("langues/deutsch.html", "Deutsch · UTALK Center",
+         "Cours d’allemand à Casablanca chez UTALK Center : niveaux A1 à C1, en groupe ou en individuel.",
+         course_body(DEUTSCH), current="langues.html")
+    page("langues/espanol.html", "Español · UTALK Center",
+         "Cours d’espagnol à Casablanca chez UTALK Center : niveaux A1 à C1, en groupe ou en individuel.",
+         course_body(ESPANOL), current="langues.html")
+    page("langues/italiano.html", "Italiano · UTALK Center",
+         "Cours d’italien à Casablanca chez UTALK Center : niveaux A1 à C1, en groupe ou en individuel.",
+         course_body(ITALIANO), current="langues.html")
     page("programmes/cours-de-langues.html", "Cours de langues · UTALK Center",
          "Cours de langues en groupe à Casablanca : anglais, français, allemand, espagnol, italien.",
          course_body(PROG_LANGUES))
+    page("programmes/communication-speaking.html", "Communication & Speaking · UTALK Center",
+         "Ateliers de communication et de prise de parole à Casablanca : débats, mises en situation, entretiens.",
+         course_body(PROG_SPEAKING))
+    page("programmes/cours-intensifs.html", "Cours intensifs · UTALK Center",
+         "Cours de langues intensifs à Casablanca : progresser vite avant un examen, un voyage ou un nouveau poste.",
+         course_body(PROG_INTENSIFS))
+    page("programmes/cours-individuels.html", "Cours individuels · UTALK Center",
+         "Cours de langues individuels à Casablanca : un professeur pour vous seul, un programme et des horaires sur mesure.",
+         course_body(PROG_INDIVIDUELS))
     page("talklab.html", "TalkLab · UTALK Center",
          "Le TalkLab d’UTALK Center : conversations, débats, jeux et événements pour pratiquer les langues.",
          talklab_body(), current="talklab.html")
