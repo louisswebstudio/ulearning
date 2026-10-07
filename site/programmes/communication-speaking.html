@@ -9,8 +9,15 @@
 <link rel="icon" type="image/png" href="../assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="../assets/css/style.css">
+<script>/* intro: full on the first page of a visit, quick on the others */try{var d=document.documentElement;if(sessionStorage.getItem('utalk-intro')){d.classList.add('intro-play','intro-quick')}else{sessionStorage.setItem('utalk-intro','1');d.classList.add('intro-play')}}catch(e){}</script>
 </head>
 <body>
+<div class="intro" aria-hidden="true">
+  <div class="intro__inner">
+    <svg class="intro__mark" viewBox="0 0 353 380"><path class="intro__petal intro__petal--l" d="M0 0C72 16 142 66 142 138V380C58 374 0 318 0 236Z"/><path class="intro__petal intro__petal--r" d="M353 0C281 16 211 66 211 138V380C295 374 353 318 353 236Z"/></svg>
+    <span class="intro__bar"></span>
+  </div>
+</div>
 
 <header class="nav">
   <div class="container nav__inner">
@@ -21,6 +28,7 @@
     <nav class="nav__links" aria-label="Navigation principale">
       <a href="../index.html">Accueil</a>
       <a href="../langues.html">Langues</a>
+      <a href="../preparation.html">Préparation</a>
       <a href="../methode.html">Méthode</a>
       <a href="../experience.html">Expérience</a>
       <a href="../talklab.html">TalkLab</a>
@@ -38,6 +46,7 @@
   <nav class="nav__mobile" id="nav-mobile" aria-label="Navigation mobile" hidden>
     <a href="../index.html">Accueil</a>
     <a href="../langues.html">Langues</a>
+    <a href="../preparation.html">Préparation</a>
     <a href="../methode.html">Méthode</a>
     <a href="../experience.html">Expérience</a>
     <a href="../talklab.html">TalkLab</a>
@@ -52,7 +61,7 @@
 <section class="course-hero">
   <div class="container">
     <p class="label"><a href="../programmes.html">Nos programmes</a></p>
-    <h1 class="course-hero__title page-hero__title">Communication &amp; Speaking</h1>
+    <h1 class="course-hero__title page-hero__title">Communication &amp; <span class="scribble">Speaking</span></h1>
     <ul class="course-hero__meta"><li>Expression orale</li><li>Tous niveaux à partir de A2</li><li>Ateliers en groupe</li></ul>
   </div>
 </section>
@@ -61,10 +70,11 @@
 <section class="course">
   <div class="container course__grid">
     <div class="course__main">
-      <figure class="course__photo"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Photo : atelier de prise de parole</span></div></figure>
+      <figure class="course__photo"><img class="ph-img" src="../assets/img/stock/communication-speaking.jpg" alt="Une femme prend la parole au micro devant un groupe" width="1400" height="931" loading="lazy" decoding="async"></figure>
 
       <h2 class="course__h">À propos du cours</h2>
       <p class="course__p">Des ateliers pour gagner en aisance à l’oral : prise de parole, débats et mises en situation. Moins de théorie, plus de pratique : vous parlez, on vous fait progresser.</p>
+
 
       <h2 class="course__h">Ce que vous allez apprendre</h2>
       <ul class="course__list">
@@ -97,7 +107,7 @@
         <p class="side-card__big">Expression orale</p>
         <ul class="side-card__list">
           <li><span class="side-ico side-ico--group"></span>Ateliers en groupe</li>
-          <li><span class="side-ico side-ico--clock"></span>Horaires : à confirmer</li>
+          <li><span class="side-ico side-ico--clock"></span>Horaires flexibles</li>
           <li><span class="side-ico side-ico--chat"></span>En lien avec le TalkLab</li>
           <li><span class="side-ico side-ico--pin"></span>Centre-ville, Casablanca</li>
         </ul>
@@ -139,6 +149,7 @@
       <p class="footer__head">Navigation</p>
       <a href="../index.html">Accueil</a>
       <a href="../langues.html">Langues</a>
+      <a href="../preparation.html">Préparation</a>
       <a href="../methode.html">Méthode</a>
       <a href="../experience.html">Expérience</a>
       <a href="../talklab.html">TalkLab</a>
@@ -158,9 +169,9 @@
 
     <div class="footer__col">
       <p class="footer__head">Contact</p>
-      <a href="tel:+212600000000">+212 6 00 00 00 00</a>
-      <a href="https://wa.me/212600000000" target="_blank" rel="noopener">WhatsApp</a>
-      <p>Centre-ville, Armée Royale<br>Immeuble 44, 12<sup>e</sup> étage<br>Casablanca</p>
+      <a href="tel:+212679757676">06 79 75 76 76</a>
+      <a href="https://wa.me/212679757676" target="_blank" rel="noopener">WhatsApp</a>
+      <p>Centre-ville, Avenue des FAR<br>Immeuble 44, 12<sup>e</sup> étage<br>Casablanca</p>
     </div>
   </div>
 

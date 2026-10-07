@@ -9,8 +9,15 @@
 <link rel="icon" type="image/png" href="assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/css/style.css">
+<script>/* intro: full on the first page of a visit, quick on the others */try{var d=document.documentElement;if(sessionStorage.getItem('utalk-intro')){d.classList.add('intro-play','intro-quick')}else{sessionStorage.setItem('utalk-intro','1');d.classList.add('intro-play')}}catch(e){}</script>
 </head>
 <body>
+<div class="intro" aria-hidden="true">
+  <div class="intro__inner">
+    <svg class="intro__mark" viewBox="0 0 353 380"><path class="intro__petal intro__petal--l" d="M0 0C72 16 142 66 142 138V380C58 374 0 318 0 236Z"/><path class="intro__petal intro__petal--r" d="M353 0C281 16 211 66 211 138V380C295 374 353 318 353 236Z"/></svg>
+    <span class="intro__bar"></span>
+  </div>
+</div>
 
 <header class="nav">
   <div class="container nav__inner">
@@ -21,6 +28,7 @@
     <nav class="nav__links" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <a href="langues.html">Langues</a>
+      <a href="preparation.html">Préparation</a>
       <a href="methode.html">Méthode</a>
       <a href="experience.html" aria-current="page">Expérience</a>
       <a href="talklab.html">TalkLab</a>
@@ -38,6 +46,7 @@
   <nav class="nav__mobile" id="nav-mobile" aria-label="Navigation mobile" hidden>
     <a href="index.html">Accueil</a>
     <a href="langues.html">Langues</a>
+    <a href="preparation.html">Préparation</a>
     <a href="methode.html">Méthode</a>
     <a href="experience.html">Expérience</a>
     <a href="talklab.html">TalkLab</a>
@@ -52,7 +61,7 @@
 <section class="course-hero">
   <div class="container">
     <p class="label">Expérience</p>
-    <h1 class="course-hero__title page-hero__title">Découvrez l’ambiance <span class="xp__circled">UTALK<svg viewBox="0 0 200 80" preserveAspectRatio="none" aria-hidden="true"><path d="M18 52 C4 30 40 8 104 8 C170 8 198 26 192 46 C186 68 130 76 88 74 C44 72 10 62 12 44 C14 30 40 18 70 14" /></svg></span></h1>
+    <h1 class="course-hero__title page-hero__title">Découvrez l’ambiance <span class="scribble">UTALK</span></h1>
     <p class="page-hero__lead">Les cours, les ateliers, les jeux et les gens : voici à quoi ressemble la vie au centre.</p>
   </div>
 </section>
@@ -60,12 +69,12 @@
 <!-- ============ VIDEO BANNER (ref: Kidora "Discover our learning space") ============ -->
 <section class="xp">
   <div class="xp__banner">
-    <div class="xp__media ph ph--dark"><span class="ph__icon"></span><span class="ph__label">Vidéo plein écran : visite du centre (fichier original à demander au client)</span></div>
+    <div class="xp__media photo-row photo-row--4"><img class="photo-row__img" src="assets/img/instagram/DVbeFAijA2A.jpg" alt="Le hall d’UTALK Center, avec les kakémonos UTALK" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="assets/img/instagram/DdYjCJtNuX3.jpg" alt="L’accueil d’UTALK Center, avec le logo et les drapeaux des cinq langues" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="assets/img/instagram/DdgZwF1tbxp.jpg" alt="L’accueil et le logo lumineux UTALK" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="assets/img/instagram/DdTmEAyNO6t.jpg" alt="Devant l’affiche UTALK, à l’entrée du 12e étage" width="800" height="1420" loading="lazy" decoding="async"></div>
     <div class="xp__overlay"></div>
     <div class="container xp__banner-inner">
       <p class="eyebrow eyebrow--light">✦ Au cœur du centre</p>
-      <h2 class="xp__title">Ici, on apprend en parlant.</h2>
-      <button type="button" class="xp__play" aria-label="Lire la vidéo de présentation"><span class="xp__play-icon" aria-hidden="true"></span>Voir la vidéo</button>
+      <h2 class="xp__title">Ici, on apprend en <span class="scribble">parlant.</span></h2>
+      <a href="https://www.instagram.com/utalk_center/reel/DdYjCJtNuX3/" target="_blank" rel="noopener" class="xp__play" aria-label="Voir la visite du centre (Instagram, nouvel onglet)"><span class="xp__play-icon" aria-hidden="true"></span>Voir la vidéo</a>
     </div>
   </div>
   <div class="marquee" aria-hidden="true">
@@ -81,7 +90,7 @@
 <section class="xp">
   <div class="container xp__gallery">
     <div class="xp__head">
-      <h2 class="xp__subtitle">Le centre en vidéos</h2>
+      <h2 class="xp__subtitle">Le centre en <span class="scribble">vidéos</span></h2>
       <div class="filters" role="group" aria-label="Filtrer les vidéos">
         <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Tout</button>
         <button type="button" class="filter" data-filter="centre" aria-pressed="false">UTALK Center</button>
@@ -91,18 +100,18 @@
       </div>
     </div>
     <ul class="tiles tiles--reels">
-      <li class="tile" data-cat="activities"><a class="reel" href="https://www.instagram.com/utalk_center/reel/Dd8u3z4N--g/" target="_blank" rel="noopener" aria-label="Jeux de société et de cartes autour d’une table (vidéo Instagram)"><img src="assets/img/instagram/Dd8u3z4N--g.jpg" alt="" width="361" height="640" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Activities</span></a></li>
-      <li class="tile" data-cat="communication"><a class="reel" href="https://www.instagram.com/utalk_center/reel/Dd1DMVoNF_K/" target="_blank" rel="noopener" aria-label="Mise en situation au bureau (vidéo Instagram)"><img src="assets/img/instagram/Dd1DMVoNF_K.jpg" alt="" width="361" height="640" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Communication</span></a></li>
-      <li class="tile" data-cat="centre"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DdrEsgFtw_t/" target="_blank" rel="noopener" aria-label="L’accueil d’UTALK Center (vidéo Instagram)"><img src="assets/img/instagram/DdrEsgFtw_t.jpg" alt="" width="361" height="640" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">UTALK Center</span></a></li>
-      <li class="tile" data-cat="classrooms"><a class="reel" href="https://www.instagram.com/utalk_center/reel/Ddln2h3tY5T/" target="_blank" rel="noopener" aria-label="Une étudiante dans une salle de cours (vidéo Instagram)"><img src="assets/img/instagram/Ddln2h3tY5T.jpg" alt="" width="361" height="640" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Classrooms</span></a></li>
-      <li class="tile" data-cat="centre"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DdgZwF1tbxp/" target="_blank" rel="noopener" aria-label="La réception et le logo UTALK (vidéo Instagram)"><img src="assets/img/instagram/DdgZwF1tbxp.jpg" alt="" width="361" height="640" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">UTALK Center</span></a></li>
-      <li class="tile" data-cat="activities"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DbDsbRftSWF/" target="_blank" rel="noopener" aria-label="Un jeu en équipe avec des ballons (vidéo Instagram)"><img src="assets/img/instagram/DbDsbRftSWF.jpg" alt="" width="361" height="640" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Activities</span></a></li>
-      <li class="tile" data-cat="centre"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DdYjCJtNuX3/" target="_blank" rel="noopener" aria-label="Visite de l’accueil du centre (vidéo Instagram)"><img src="assets/img/instagram/DdYjCJtNuX3.jpg" alt="" width="361" height="640" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">UTALK Center</span></a></li>
-      <li class="tile" data-cat="classrooms"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DavO0NTNy_q/" target="_blank" rel="noopener" aria-label="Un cours devant l’écran interactif (vidéo Instagram)"><img src="assets/img/instagram/DavO0NTNy_q.jpg" alt="" width="361" height="640" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Classrooms</span></a></li>
-      <li class="tile" data-cat="communication"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DXmmpJqDJwf/" target="_blank" rel="noopener" aria-label="Un étudiant prend la parole (vidéo Instagram)"><img src="assets/img/instagram/DXmmpJqDJwf.jpg" alt="" width="361" height="640" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Communication</span></a></li>
-      <li class="tile" data-cat="centre"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DdTmEAyNO6t/" target="_blank" rel="noopener" aria-label="L’entrée du centre, au 12e étage (vidéo Instagram)"><img src="assets/img/instagram/DdTmEAyNO6t.jpg" alt="" width="361" height="640" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">UTALK Center</span></a></li>
-      <li class="tile" data-cat="communication"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DYj_qf_scYO/" target="_blank" rel="noopener" aria-label="Une étudiante en salle de cours (vidéo Instagram)"><img src="assets/img/instagram/DYj_qf_scYO.jpg" alt="" width="361" height="640" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Communication</span></a></li>
-      <li class="tile" data-cat="centre"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DVbeFAijA2A/" target="_blank" rel="noopener" aria-label="Le couloir et l’espace d’accueil (vidéo Instagram)"><img src="assets/img/instagram/DVbeFAijA2A.jpg" alt="" width="361" height="640" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">UTALK Center</span></a></li>
+      <li class="tile" data-cat="activities"><a class="reel" href="https://www.instagram.com/utalk_center/reel/Dd8u3z4N--g/" target="_blank" rel="noopener" aria-label="Jeux de société et de cartes autour d’une table (vidéo Instagram)"><img src="assets/img/instagram/Dd8u3z4N--g.jpg" alt="" width="800" height="1420" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Activities</span></a></li>
+      <li class="tile" data-cat="communication"><a class="reel" href="https://www.instagram.com/utalk_center/reel/Dd1DMVoNF_K/" target="_blank" rel="noopener" aria-label="Mise en situation au bureau (vidéo Instagram)"><img src="assets/img/instagram/Dd1DMVoNF_K.jpg" alt="" width="800" height="1420" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Communication</span></a></li>
+      <li class="tile" data-cat="centre"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DdrEsgFtw_t/" target="_blank" rel="noopener" aria-label="L’accueil d’UTALK Center (vidéo Instagram)"><img src="assets/img/instagram/DdrEsgFtw_t.jpg" alt="" width="800" height="1420" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">UTALK Center</span></a></li>
+      <li class="tile" data-cat="classrooms"><a class="reel" href="https://www.instagram.com/utalk_center/reel/Ddln2h3tY5T/" target="_blank" rel="noopener" aria-label="Une étudiante dans une salle de cours (vidéo Instagram)"><img src="assets/img/instagram/Ddln2h3tY5T.jpg" alt="" width="800" height="1420" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Classrooms</span></a></li>
+      <li class="tile" data-cat="centre"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DdgZwF1tbxp/" target="_blank" rel="noopener" aria-label="La réception et le logo UTALK (vidéo Instagram)"><img src="assets/img/instagram/DdgZwF1tbxp.jpg" alt="" width="800" height="1420" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">UTALK Center</span></a></li>
+      <li class="tile" data-cat="activities"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DbDsbRftSWF/" target="_blank" rel="noopener" aria-label="Un jeu en équipe avec des ballons (vidéo Instagram)"><img src="assets/img/instagram/DbDsbRftSWF.jpg" alt="" width="800" height="1420" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Activities</span></a></li>
+      <li class="tile" data-cat="centre"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DdYjCJtNuX3/" target="_blank" rel="noopener" aria-label="Visite de l’accueil du centre (vidéo Instagram)"><img src="assets/img/instagram/DdYjCJtNuX3.jpg" alt="" width="800" height="1420" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">UTALK Center</span></a></li>
+      <li class="tile" data-cat="classrooms"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DavO0NTNy_q/" target="_blank" rel="noopener" aria-label="Un cours devant l’écran interactif (vidéo Instagram)"><img src="assets/img/instagram/DavO0NTNy_q.jpg" alt="" width="800" height="1420" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Classrooms</span></a></li>
+      <li class="tile" data-cat="communication"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DXmmpJqDJwf/" target="_blank" rel="noopener" aria-label="Un étudiant prend la parole (vidéo Instagram)"><img src="assets/img/instagram/DXmmpJqDJwf.jpg" alt="" width="800" height="1420" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Communication</span></a></li>
+      <li class="tile" data-cat="centre"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DdTmEAyNO6t/" target="_blank" rel="noopener" aria-label="L’entrée du centre, au 12e étage (vidéo Instagram)"><img src="assets/img/instagram/DdTmEAyNO6t.jpg" alt="" width="800" height="1420" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">UTALK Center</span></a></li>
+      <li class="tile" data-cat="communication"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DYj_qf_scYO/" target="_blank" rel="noopener" aria-label="Une étudiante en salle de cours (vidéo Instagram)"><img src="assets/img/instagram/DYj_qf_scYO.jpg" alt="" width="800" height="1420" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Communication</span></a></li>
+      <li class="tile" data-cat="centre"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DVbeFAijA2A/" target="_blank" rel="noopener" aria-label="Le couloir et l’espace d’accueil (vidéo Instagram)"><img src="assets/img/instagram/DVbeFAijA2A.jpg" alt="" width="800" height="1420" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">UTALK Center</span></a></li>
     </ul>
     <div class="xp__more">
       <a href="https://www.instagram.com/utalk_center/" class="btn-pill" target="_blank" rel="noopener">Suivez-nous sur Instagram <span class="btn-pill__icon" aria-hidden="true"></span></a>
@@ -141,6 +150,7 @@
       <p class="footer__head">Navigation</p>
       <a href="index.html">Accueil</a>
       <a href="langues.html">Langues</a>
+      <a href="preparation.html">Préparation</a>
       <a href="methode.html">Méthode</a>
       <a href="experience.html">Expérience</a>
       <a href="talklab.html">TalkLab</a>
@@ -160,9 +170,9 @@
 
     <div class="footer__col">
       <p class="footer__head">Contact</p>
-      <a href="tel:+212600000000">+212 6 00 00 00 00</a>
-      <a href="https://wa.me/212600000000" target="_blank" rel="noopener">WhatsApp</a>
-      <p>Centre-ville, Armée Royale<br>Immeuble 44, 12<sup>e</sup> étage<br>Casablanca</p>
+      <a href="tel:+212679757676">06 79 75 76 76</a>
+      <a href="https://wa.me/212679757676" target="_blank" rel="noopener">WhatsApp</a>
+      <p>Centre-ville, Avenue des FAR<br>Immeuble 44, 12<sup>e</sup> étage<br>Casablanca</p>
     </div>
   </div>
 

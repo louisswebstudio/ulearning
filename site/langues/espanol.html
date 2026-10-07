@@ -9,8 +9,15 @@
 <link rel="icon" type="image/png" href="../assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="../assets/css/style.css">
+<script>/* intro: full on the first page of a visit, quick on the others */try{var d=document.documentElement;if(sessionStorage.getItem('utalk-intro')){d.classList.add('intro-play','intro-quick')}else{sessionStorage.setItem('utalk-intro','1');d.classList.add('intro-play')}}catch(e){}</script>
 </head>
 <body>
+<div class="intro" aria-hidden="true">
+  <div class="intro__inner">
+    <svg class="intro__mark" viewBox="0 0 353 380"><path class="intro__petal intro__petal--l" d="M0 0C72 16 142 66 142 138V380C58 374 0 318 0 236Z"/><path class="intro__petal intro__petal--r" d="M353 0C281 16 211 66 211 138V380C295 374 353 318 353 236Z"/></svg>
+    <span class="intro__bar"></span>
+  </div>
+</div>
 
 <header class="nav">
   <div class="container nav__inner">
@@ -21,6 +28,7 @@
     <nav class="nav__links" aria-label="Navigation principale">
       <a href="../index.html">Accueil</a>
       <a href="../langues.html" aria-current="page">Langues</a>
+      <a href="../preparation.html">Préparation</a>
       <a href="../methode.html">Méthode</a>
       <a href="../experience.html">Expérience</a>
       <a href="../talklab.html">TalkLab</a>
@@ -38,6 +46,7 @@
   <nav class="nav__mobile" id="nav-mobile" aria-label="Navigation mobile" hidden>
     <a href="../index.html">Accueil</a>
     <a href="../langues.html">Langues</a>
+    <a href="../preparation.html">Préparation</a>
     <a href="../methode.html">Méthode</a>
     <a href="../experience.html">Expérience</a>
     <a href="../talklab.html">TalkLab</a>
@@ -52,7 +61,7 @@
 <section class="course-hero">
   <div class="container">
     <p class="label">Nos langues</p>
-    <h1 class="course-hero__title page-hero__title">Español</h1>
+    <h1 class="course-hero__title page-hero__title"><span class="scribble">Español</span></h1>
     <ul class="course-hero__meta"><li><svg class="flag flag--sm" viewBox="0 0 60 60" aria-hidden="true"><clipPath id="f-es"><circle cx="30" cy="30" r="30"/></clipPath><g clip-path="url(#f-es)"><rect width="60" height="60" fill="#AA151B"/><rect y="15" width="60" height="30" fill="#F1BF00"/></g></svg> Cours d’espagnol</li><li>Niveaux A1 → C1</li><li>Groupes &amp; individuels</li></ul>
   </div>
 </section>
@@ -61,10 +70,11 @@
 <section class="course">
   <div class="container course__grid">
     <div class="course__main">
-      <figure class="course__photo"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Photo : un cours d’espagnol chez UTALK</span></div></figure>
+      <figure class="course__photo"><img class="ph-img" src="../assets/img/instagram/Dd8u3z4N--g.jpg" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"></figure>
 
       <h2 class="course__h">À propos du cours</h2>
       <p class="course__p">Une langue parlée sur quatre continents, et rapide à prendre en main quand on parle déjà français. Nos cours d’espagnol vous font parler très vite, avec plaisir.</p>
+
 
       <h2 class="course__h">Ce que vous allez apprendre</h2>
       <ul class="course__list">
@@ -99,8 +109,8 @@
         <ul class="side-card__list">
           <li><span class="side-ico side-ico--group"></span>Cours en petit groupe</li>
           <li><span class="side-ico side-ico--user"></span>Cours individuels sur mesure</li>
-          <li><span class="side-ico side-ico--clock"></span>Horaires : à confirmer</li>
-          <li><span class="side-ico side-ico--chat"></span>Pratique orale au TalkLab</li>
+          <li><span class="side-ico side-ico--clock"></span>Horaires flexibles</li>
+          <li><span class="side-ico side-ico--chat"></span>Communication au TalkLab</li>
           <li><span class="side-ico side-ico--pin"></span>Centre-ville, Casablanca</li>
         </ul>
         <a href="../contact.html" class="btn btn--primary side-card__btn">Demander des informations</a>
@@ -113,7 +123,8 @@
 <!-- ============ CTA PANEL (ref: BrightMind "Take the First Step") ============ -->
 <section class="cta-band">
   <div class="container">
-    <div class="cta-panel">
+    <div class="cta-panel cta-panel--flag cta-panel--es">
+      <svg class="cta-panel__flag" viewBox="0 0 3 2" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="3" height="2" fill="#AA151B"/><rect y=".5" width="3" height="1" fill="#F1BF00"/></svg>
       <h2 class="cta-panel__title">¿Listo? Prêt à parler espagnol&nbsp;?</h2>
       <a href="../contact.html" class="btn cta-panel__btn">Contactez-nous</a>
     </div>
@@ -141,6 +152,7 @@
       <p class="footer__head">Navigation</p>
       <a href="../index.html">Accueil</a>
       <a href="../langues.html">Langues</a>
+      <a href="../preparation.html">Préparation</a>
       <a href="../methode.html">Méthode</a>
       <a href="../experience.html">Expérience</a>
       <a href="../talklab.html">TalkLab</a>
@@ -160,9 +172,9 @@
 
     <div class="footer__col">
       <p class="footer__head">Contact</p>
-      <a href="tel:+212600000000">+212 6 00 00 00 00</a>
-      <a href="https://wa.me/212600000000" target="_blank" rel="noopener">WhatsApp</a>
-      <p>Centre-ville, Armée Royale<br>Immeuble 44, 12<sup>e</sup> étage<br>Casablanca</p>
+      <a href="tel:+212679757676">06 79 75 76 76</a>
+      <a href="https://wa.me/212679757676" target="_blank" rel="noopener">WhatsApp</a>
+      <p>Centre-ville, Avenue des FAR<br>Immeuble 44, 12<sup>e</sup> étage<br>Casablanca</p>
     </div>
   </div>
 

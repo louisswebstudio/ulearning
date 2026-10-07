@@ -4,13 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Étudiants · UTALK Center</title>
-<meta name="description" content="Témoignages, success stories et photos des étudiants d’UTALK Center.">
+<meta name="description" content="Avis des étudiants d’UTALK Center (avis Google et témoignages) et photos du centre.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/css/style.css">
+<script>/* intro: full on the first page of a visit, quick on the others */try{var d=document.documentElement;if(sessionStorage.getItem('utalk-intro')){d.classList.add('intro-play','intro-quick')}else{sessionStorage.setItem('utalk-intro','1');d.classList.add('intro-play')}}catch(e){}</script>
 </head>
 <body>
+<div class="intro" aria-hidden="true">
+  <div class="intro__inner">
+    <svg class="intro__mark" viewBox="0 0 353 380"><path class="intro__petal intro__petal--l" d="M0 0C72 16 142 66 142 138V380C58 374 0 318 0 236Z"/><path class="intro__petal intro__petal--r" d="M353 0C281 16 211 66 211 138V380C295 374 353 318 353 236Z"/></svg>
+    <span class="intro__bar"></span>
+  </div>
+</div>
 
 <header class="nav">
   <div class="container nav__inner">
@@ -21,6 +28,7 @@
     <nav class="nav__links" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <a href="langues.html">Langues</a>
+      <a href="preparation.html">Préparation</a>
       <a href="methode.html">Méthode</a>
       <a href="experience.html">Expérience</a>
       <a href="talklab.html">TalkLab</a>
@@ -38,6 +46,7 @@
   <nav class="nav__mobile" id="nav-mobile" aria-label="Navigation mobile" hidden>
     <a href="index.html">Accueil</a>
     <a href="langues.html">Langues</a>
+    <a href="preparation.html">Préparation</a>
     <a href="methode.html">Méthode</a>
     <a href="experience.html">Expérience</a>
     <a href="talklab.html">TalkLab</a>
@@ -52,105 +61,196 @@
 <section class="course-hero">
   <div class="container">
     <p class="label">Étudiants</p>
-    <h1 class="course-hero__title page-hero__title">They learned. They practiced. They started <span class="swash">speaking.<svg viewBox="0 0 160 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 22 C40 8 110 4 156 12" /></svg></span></h1>
-    <p class="page-hero__lead">Leurs témoignages, leurs parcours et leurs premiers pas à l’oral.</p>
+    <h1 class="course-hero__title page-hero__title">They learned. They practiced. They started <span class="scribble">speaking.</span></h1>
+    <p class="page-hero__lead">Leurs avis sur les cours, les professeurs et l’ambiance du centre.</p>
   </div>
 </section>
 
-<!-- ============ VIDEO TESTIMONIALS (ref: Kidora testimonial cards, as a grid) ============ -->
-<section class="stu stu--page">
+<!-- ============ REVIEWS (UTALK review cards + Google reviews) ============ -->
+<section class="stu stu--page" aria-label="Avis de nos étudiants">
   <div class="container">
-    <h2 class="section-title stu__subtitle">Témoignages <span class="accent">vidéo</span></h2>
-    <ul class="stories-grid">
-    <li class="story">
-      <div class="story__photo"><div class="ph"><span class="ph__icon ph__icon--play"></span><span class="ph__label">Vidéo témoignage</span></div></div>
+    <ul class="stories-grid stories-grid--reviews">
+    <li class="story story--text">
       <div class="story__body">
-        <span class="story__badge">Vidéo</span>
-        <p class="story__quote">« Ici, le témoignage vidéo d’un étudiant UTALK : ce qu’il a appris et comment il a progressé. »</p>
-        <p class="story__name">Prénom N.</p>
-        <p class="story__meta">English · A2 → B2</p>
+        <span class="story__badge">Avis Google</span>
+        <p class="review__stars" role="img" aria-label="Note : 5 sur 5">★★★★★</p>
+        <p class="story__quote">« Je suis très satisfait des services offerts par U Talk Centre. L’équipe très professionnelle, à l’écoute et toujours disponible pour répondre aux besoins des apprenants. Les formations sont bien structurées, interactives et adaptées à tous les niveaux. C’est un excellent centre pour apprendre les langues dans une ambiance motivante et conviviale. Je le recommande vivement. »</p>
+        <div class="story__author">
+          <span class="story__avatar story__avatar--fr" aria-hidden="true">BB</span>
+          <div>
+            <p class="story__name">Brahim Boutaouf</p>
+            <p class="story__meta">Avis Google</p>
+          </div>
+        </div>
       </div>
     </li>
-    <li class="story">
-      <div class="story__photo"><div class="ph"><span class="ph__icon ph__icon--play"></span><span class="ph__label">Vidéo témoignage</span></div></div>
+    <li class="story story--text">
       <div class="story__body">
-        <span class="story__badge">Vidéo</span>
-        <p class="story__quote">« Ici, le témoignage vidéo d’un étudiant sur son expérience au TalkLab. »</p>
-        <p class="story__name">Prénom N.</p>
-        <p class="story__meta">Deutsch · A1 → B1</p>
+        <span class="story__badge">Avis élève UTALK</span>
+        <p class="review__stars" role="img" aria-label="Note : 5 sur 5">★★★★★</p>
+        <p class="story__quote">« J’aime ce centre parce que les professeurs expliquent bien et encouragent à beaucoup pratiquer. Mon conseil : continuez à motiver les élèves à parler davantage en classe. Merci pour le bon accueil. »</p>
+        <div class="story__author">
+          <span class="story__avatar story__avatar--en" aria-hidden="true">HA</span>
+          <div>
+            <p class="story__name">Hamza Aziz</p>
+            <p class="story__meta">Avis élève UTALK · Traduit de l’arabe</p>
+          </div>
+        </div>
       </div>
     </li>
-    <li class="story">
-      <div class="story__photo"><div class="ph"><span class="ph__icon ph__icon--play"></span><span class="ph__label">Vidéo témoignage</span></div></div>
+    <li class="story story--text">
       <div class="story__body">
-        <span class="story__badge">Vidéo</span>
-        <p class="story__quote">« Ici, le témoignage vidéo d’un étudiant sur ses cours et ses professeurs. »</p>
-        <p class="story__name">Prénom N.</p>
-        <p class="story__meta">Español · A2 → B2</p>
+        <span class="story__badge">Avis élève UTALK</span>
+        <p class="review__stars" role="img" aria-label="Note : 5 sur 5">★★★★★</p>
+        <p class="story__quote">« Personnellement, je trouve que le personnel de ce centre est vraiment sympathique et bienveillant. Merci à toute l’équipe pour vos efforts et votre gentillesse. »</p>
+        <div class="story__author">
+          <span class="story__avatar story__avatar--it" aria-hidden="true">I</span>
+          <div>
+            <p class="story__name">Ilham</p>
+            <p class="story__meta">Avis élève UTALK</p>
+          </div>
+        </div>
       </div>
     </li>
-    <li class="story">
-      <div class="story__photo"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Photo de l’étudiant</span></div></div>
+    <li class="story story--text">
       <div class="story__body">
-        <span class="story__badge">Expérience</span>
-        <p class="story__quote">« Ici, le témoignage écrit d’un étudiant : l’ambiance, les activités, ce qu’il retient. »</p>
-        <p class="story__name">Prénom N.</p>
-        <p class="story__meta">Italiano · A1 → A2</p>
+        <span class="story__badge">Avis élève UTALK</span>
+        <p class="review__stars" role="img" aria-label="Note : 5 sur 5">★★★★★</p>
+        <p class="story__quote">« J’ai adoré la façon d’expliquer, les activités et les jeux variés. »</p>
+        <div class="story__author">
+          <span class="story__avatar story__avatar--de" aria-hidden="true">FZ</span>
+          <div>
+            <p class="story__name">Fatima Zahra</p>
+            <p class="story__meta">Avis élève UTALK · Traduit de l’arabe</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="story story--text">
+      <div class="story__body">
+        <span class="story__badge">Avis élève UTALK</span>
+        <p class="review__stars" role="img" aria-label="Note : 5 sur 5">★★★★★</p>
+        <p class="story__quote">« Un accueil excellent, et la façon de transmettre l’information comme les cours sont excellents. Je souhaite beaucoup de réussite au centre. »</p>
+        <div class="story__author">
+          <span class="story__avatar story__avatar--es" aria-hidden="true">S</span>
+          <div>
+            <p class="story__name">Soufiane</p>
+            <p class="story__meta">Avis élève UTALK · Traduit de l’arabe</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="story story--text">
+      <div class="story__body">
+        <span class="story__badge">Avis Google</span>
+        <p class="review__stars" role="img" aria-label="Note : 5 sur 5">★★★★★</p>
+        <p class="story__quote">« Très bon centre de langues, avec des professeurs compétents et une bonne ambiance. Je recommande. »</p>
+        <div class="story__author">
+          <span class="story__avatar story__avatar--fr" aria-hidden="true">HS</span>
+          <div>
+            <p class="story__name">Hilal Younes Saad</p>
+            <p class="story__meta">Avis Google</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="story story--text">
+      <div class="story__body">
+        <span class="story__badge">Avis Google</span>
+        <p class="review__stars" role="img" aria-label="Note : 5 sur 5">★★★★★</p>
+        <p class="story__quote">« Éducatif, accueillant et informatif, je recommande. »</p>
+        <div class="story__author">
+          <span class="story__avatar story__avatar--en" aria-hidden="true">SN</span>
+          <div>
+            <p class="story__name">Souhail Nahed</p>
+            <p class="story__meta">Avis Google</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="story story--text">
+      <div class="story__body">
+        <span class="story__badge">Avis Google</span>
+        <p class="review__stars" role="img" aria-label="Note : 5 sur 5">★★★★★</p>
+        <p class="story__quote">« J’apprécie beaucoup le professionnalisme du personnel. »</p>
+        <div class="story__author">
+          <span class="story__avatar story__avatar--it" aria-hidden="true">KC</span>
+          <div>
+            <p class="story__name">Khadija Chagraoui</p>
+            <p class="story__meta">Avis Google · Traduit de l’italien par Google</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="story story--text">
+      <div class="story__body">
+        <span class="story__badge">Avis Google</span>
+        <p class="review__stars" role="img" aria-label="Note : 5 sur 5">★★★★★</p>
+        <p class="story__quote">« Nice place, good people, best experience. »</p>
+        <div class="story__author">
+          <span class="story__avatar story__avatar--de" aria-hidden="true">AO</span>
+          <div>
+            <p class="story__name">Anouar Oufaress</p>
+            <p class="story__meta">Avis Google · En anglais</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="story story--text">
+      <div class="story__body">
+        <span class="story__badge">Avis élève UTALK</span>
+        <p class="review__stars" role="img" aria-label="Note : 4,5 sur 5">★★★★<span class="review__half">★</span></p>
+        <p class="story__quote">« Me gusta mucho&nbsp;! 😍 »</p>
+        <div class="story__author">
+          <span class="story__avatar story__avatar--es" aria-hidden="true">K</span>
+          <div>
+            <p class="story__name">Karima</p>
+            <p class="story__meta">Avis élève UTALK · En espagnol : « J’aime beaucoup »</p>
+          </div>
+        </div>
       </div>
     </li>
     </ul>
   </div>
 </section>
 
-<!-- ============ SUCCESS STORIES (ref: Kidora split photo + text) ============ -->
-<section class="successes">
+<!-- ============ REVIEW CARDS (the designed cards from Instagram) ============ -->
+<section class="avis">
   <div class="container">
-    <h2 class="section-title stu__subtitle">Success <span class="accent">stories</span></h2>
-    <div class="successes__list">
-    <article class="success">
-      <figure class="success__photo"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Photo de l’étudiant</span></div></figure>
-      <div class="success__body">
-        <span class="story__badge">Success story</span>
-        <h3 class="success__title">Titre de la success story</h3>
-        <dl class="success__facts">
-          <div><dt>Objectif</dt><dd>À compléter avec l’objectif de départ de l’étudiant.</dd></div>
-          <div><dt>Parcours</dt><dd>À compléter : langue, niveaux, programme suivi.</dd></div>
-          <div><dt>Résultat</dt><dd>À compléter : ce que la langue lui a permis de faire.</dd></div>
-        </dl>
-        <p class="story__name">Prénom N.</p>
-        <p class="story__meta">Français · B1 → C1</p>
-      </div>
-    </article>
-    <article class="success">
-      <figure class="success__photo"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Photo de l’étudiant</span></div></figure>
-      <div class="success__body">
-        <span class="story__badge">Success story</span>
-        <h3 class="success__title">Titre de la success story</h3>
-        <dl class="success__facts">
-          <div><dt>Objectif</dt><dd>À compléter avec l’objectif de départ de l’étudiant.</dd></div>
-          <div><dt>Parcours</dt><dd>À compléter : langue, niveaux, programme suivi.</dd></div>
-          <div><dt>Résultat</dt><dd>À compléter : ce que la langue lui a permis de faire.</dd></div>
-        </dl>
-        <p class="story__name">Prénom N.</p>
-        <p class="story__meta">English · A2 → B2</p>
-      </div>
-    </article>
-    </div>
+    <h2 class="section-title stu__subtitle">Leurs avis, <span class="scribble">en images</span></h2>
+  </div>
+  <div class="avis__marquee">
+    <ul class="avis__track">
+      <li><a class="avis-card" href="assets/img/avis/avis-hamza.jpg" target="_blank" rel="noopener"><img src="assets/img/avis/avis-hamza.jpg" alt="Carte d’avis UTALK de Hamza Aziz, 5 étoiles sur 5 : « J’aime ce centre parce que les professeurs expliquent bien et encouragent à beaucoup pratiquer. Mon conseil : continuez à motiver les élèves à parler davantage en classe. Merci pour le bon accueil. »" width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li><a class="avis-card" href="assets/img/avis/avis-ilham.jpg" target="_blank" rel="noopener"><img src="assets/img/avis/avis-ilham.jpg" alt="Carte d’avis UTALK de Ilham, 5 étoiles sur 5 : « Personnellement, je trouve que le personnel de ce centre est vraiment sympathique et bienveillant. Merci à toute l’équipe pour vos efforts et votre gentillesse. »" width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li><a class="avis-card" href="assets/img/avis/avis-google-1.jpg" target="_blank" rel="noopener"><img src="assets/img/avis/avis-google-1.jpg" alt="Capture d’avis Google 5 étoiles sur UTALK Center : Anouar Oufaress, Saad Ribhi, Khadija Chagraoui et d’autres élèves recommandent le centre." width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li><a class="avis-card" href="assets/img/avis/avis-fatima-zahra.jpg" target="_blank" rel="noopener"><img src="assets/img/avis/avis-fatima-zahra.jpg" alt="Carte d’avis UTALK de Fatima Zahra, 5 étoiles sur 5 : « J’ai adoré la façon d’expliquer, les activités et les jeux variés. »" width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li><a class="avis-card" href="assets/img/avis/avis-soufiane.jpg" target="_blank" rel="noopener"><img src="assets/img/avis/avis-soufiane.jpg" alt="Carte d’avis UTALK de Soufiane, 5 étoiles sur 5 : « Un accueil excellent, et la façon de transmettre l’information comme les cours sont excellents. Je souhaite beaucoup de réussite au centre. »" width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li><a class="avis-card" href="assets/img/avis/avis-google-2.jpg" target="_blank" rel="noopener"><img src="assets/img/avis/avis-google-2.jpg" alt="Capture d’avis Google 5 étoiles sur UTALK Center : Zineb Ait Ameur, Souhail Nahed et Brahim Boutaouf recommandent le centre." width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li><a class="avis-card" href="assets/img/avis/avis-karima.jpg" target="_blank" rel="noopener"><img src="assets/img/avis/avis-karima.jpg" alt="Carte d’avis UTALK de Karima, 4,5 étoiles sur 5 : « Me gusta mucho ! 😍 »" width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li aria-hidden="true"><a class="avis-card" href="assets/img/avis/avis-hamza.jpg" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/avis/avis-hamza.jpg" alt="" width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li aria-hidden="true"><a class="avis-card" href="assets/img/avis/avis-ilham.jpg" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/avis/avis-ilham.jpg" alt="" width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li aria-hidden="true"><a class="avis-card" href="assets/img/avis/avis-google-1.jpg" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/avis/avis-google-1.jpg" alt="" width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li aria-hidden="true"><a class="avis-card" href="assets/img/avis/avis-fatima-zahra.jpg" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/avis/avis-fatima-zahra.jpg" alt="" width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li aria-hidden="true"><a class="avis-card" href="assets/img/avis/avis-soufiane.jpg" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/avis/avis-soufiane.jpg" alt="" width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li aria-hidden="true"><a class="avis-card" href="assets/img/avis/avis-google-2.jpg" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/avis/avis-google-2.jpg" alt="" width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li aria-hidden="true"><a class="avis-card" href="assets/img/avis/avis-karima.jpg" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/avis/avis-karima.jpg" alt="" width="800" height="1422" loading="lazy" decoding="async"></a></li>
+    </ul>
   </div>
 </section>
 
 <!-- ============ PHOTOS ============ -->
 <section class="xp">
   <div class="container xp__gallery">
-    <div class="xp__head"><h2 class="xp__subtitle">Nos étudiants en images</h2></div>
+    <div class="xp__head"><h2 class="xp__subtitle">Nos étudiants en <span class="scribble">images</span></h2></div>
     <ul class="tiles">
-      <li class="tile tile--big"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Photo de groupe</span></div></li>
-      <li class="tile"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Étudiants en cours</span></div></li>
-      <li class="tile tile--tall"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Au TalkLab</span></div></li>
-      <li class="tile"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Remise de certificats</span></div></li>
-      <li class="tile tile--wide"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Sortie ou événement</span></div></li>
-      <li class="tile"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Portrait</span></div></li>
-      <li class="tile"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Portrait</span></div></li>
+      <li class="tile tile--big"><div class="photo-row photo-row--2"><img class="photo-row__img" src="assets/img/instagram/hl-classe.jpg" alt="Un cours en petit groupe autour de la grande table" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="assets/img/instagram/DbDsbRftSWF.jpg" alt="Deux étudiants pendant un jeu de langue avec des ballons" width="800" height="1420" loading="lazy" decoding="async"></div></li>
+      <li class="tile"><img class="ph-img" src="assets/img/instagram/hl-salle.jpg" alt="Des étudiants dans une salle de cours lumineuse" width="800" height="1420" loading="lazy" decoding="async"></li>
+      <li class="tile tile--tall"><img class="ph-img" src="assets/img/instagram/hl-talklab.jpg" alt="Un étudiant à la table du TalkLab, devant l’écran interactif" width="800" height="1420" loading="lazy" decoding="async"></li>
+      <li class="tile"><img class="ph-img" src="assets/img/instagram/DYj_qf_scYO.jpg" alt="Une étudiante souriante, assise à l’accueil du centre" width="800" height="1420" loading="lazy" decoding="async"></li>
+      <li class="tile tile--wide"><div class="photo-row photo-row--2"><img class="photo-row__img" src="assets/img/instagram/Dd8u3z4N--g.jpg" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="assets/img/instagram/DavO0NTNy_q.jpg" alt="Des étudiantes rient pendant une activité devant l’écran interactif" width="800" height="1420" loading="lazy" decoding="async"></div></li>
+      <li class="tile"><img class="ph-img" src="assets/img/instagram/hl-etudiante.jpg" alt="Une étudiante souriante pendant le cours" width="800" height="1420" loading="lazy" decoding="async"></li>
+      <li class="tile"><img class="ph-img" src="assets/img/instagram/hl-adulte.jpg" alt="Un apprenant adulte, détendu, en salle de cours" width="800" height="1420" loading="lazy" decoding="async"></li>
     </ul>
   </div>
 </section>
@@ -186,6 +286,7 @@
       <p class="footer__head">Navigation</p>
       <a href="index.html">Accueil</a>
       <a href="langues.html">Langues</a>
+      <a href="preparation.html">Préparation</a>
       <a href="methode.html">Méthode</a>
       <a href="experience.html">Expérience</a>
       <a href="talklab.html">TalkLab</a>
@@ -205,9 +306,9 @@
 
     <div class="footer__col">
       <p class="footer__head">Contact</p>
-      <a href="tel:+212600000000">+212 6 00 00 00 00</a>
-      <a href="https://wa.me/212600000000" target="_blank" rel="noopener">WhatsApp</a>
-      <p>Centre-ville, Armée Royale<br>Immeuble 44, 12<sup>e</sup> étage<br>Casablanca</p>
+      <a href="tel:+212679757676">06 79 75 76 76</a>
+      <a href="https://wa.me/212679757676" target="_blank" rel="noopener">WhatsApp</a>
+      <p>Centre-ville, Avenue des FAR<br>Immeuble 44, 12<sup>e</sup> étage<br>Casablanca</p>
     </div>
   </div>
 

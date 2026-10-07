@@ -9,8 +9,15 @@
 <link rel="icon" type="image/png" href="assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/css/style.css">
+<script>/* intro: full on the first page of a visit, quick on the others */try{var d=document.documentElement;if(sessionStorage.getItem('utalk-intro')){d.classList.add('intro-play','intro-quick')}else{sessionStorage.setItem('utalk-intro','1');d.classList.add('intro-play')}}catch(e){}</script>
 </head>
 <body>
+<div class="intro" aria-hidden="true">
+  <div class="intro__inner">
+    <svg class="intro__mark" viewBox="0 0 353 380"><path class="intro__petal intro__petal--l" d="M0 0C72 16 142 66 142 138V380C58 374 0 318 0 236Z"/><path class="intro__petal intro__petal--r" d="M353 0C281 16 211 66 211 138V380C295 374 353 318 353 236Z"/></svg>
+    <span class="intro__bar"></span>
+  </div>
+</div>
 
 <header class="nav">
   <div class="container nav__inner">
@@ -21,6 +28,7 @@
     <nav class="nav__links" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <a href="langues.html">Langues</a>
+      <a href="preparation.html">Préparation</a>
       <a href="methode.html">Méthode</a>
       <a href="experience.html">Expérience</a>
       <a href="talklab.html" aria-current="page">TalkLab</a>
@@ -38,6 +46,7 @@
   <nav class="nav__mobile" id="nav-mobile" aria-label="Navigation mobile" hidden>
     <a href="index.html">Accueil</a>
     <a href="langues.html">Langues</a>
+    <a href="preparation.html">Préparation</a>
     <a href="methode.html">Méthode</a>
     <a href="experience.html">Expérience</a>
     <a href="talklab.html">TalkLab</a>
@@ -52,7 +61,7 @@
 <section class="course-hero">
   <div class="container">
     <p class="label">TalkLab</p>
-    <h1 class="course-hero__title page-hero__title">Learn the language. <span class="xp__circled">Live<svg viewBox="0 0 200 80" preserveAspectRatio="none" aria-hidden="true"><path d="M18 52 C4 30 40 8 104 8 C170 8 198 26 192 46 C186 68 130 76 88 74 C44 72 10 62 12 44 C14 30 40 18 70 14" /></svg></span> the language.</h1>
+    <h1 class="course-hero__title page-hero__title">Learn the language. <span class="scribble">Live</span> the language.</h1>
     <p class="page-hero__lead">Le TalkLab, c’est l’espace d’UTALK où l’on pratique pour de vrai : conversations, débats, jeux et événements.</p>
   </div>
 </section>
@@ -60,12 +69,12 @@
 <!-- ============ VIDEO BANNER (ref: Kidora "Discover our learning space") ============ -->
 <section class="xp">
   <div class="xp__banner">
-    <div class="xp__media ph ph--dark"><span class="ph__icon"></span><span class="ph__label">Vidéo plein écran : une séance au TalkLab</span></div>
+    <div class="xp__media photo-row photo-row--4"><img class="photo-row__img" src="assets/img/instagram/Dd8u3z4N--g.jpg" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="assets/img/instagram/DbDsbRftSWF.jpg" alt="Deux étudiants pendant un jeu de langue avec des ballons" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="assets/img/instagram/DXmmpJqDJwf.jpg" alt="Un étudiant prend la parole autour de la table" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="assets/img/instagram/DavO0NTNy_q.jpg" alt="Des étudiantes rient pendant une activité devant l’écran interactif" width="800" height="1420" loading="lazy" decoding="async"></div>
     <div class="xp__overlay"></div>
     <div class="container xp__banner-inner">
       <p class="eyebrow eyebrow--light">✦ Au cœur du TalkLab</p>
-      <h2 class="xp__title">Ici, on parle.</h2>
-      <button type="button" class="xp__play" aria-label="Lire la vidéo du TalkLab"><span class="xp__play-icon" aria-hidden="true"></span>Voir la vidéo</button>
+      <h2 class="xp__title">Ici, on <span class="scribble">parle.</span></h2>
+      <a href="https://www.instagram.com/utalk_center/reel/Dd8u3z4N--g/" target="_blank" rel="noopener" class="xp__play" aria-label="Voir une séance du TalkLab (Instagram, nouvel onglet)"><span class="xp__play-icon" aria-hidden="true"></span>Voir la vidéo</a>
     </div>
   </div>
   <div class="marquee" aria-hidden="true">
@@ -82,14 +91,10 @@
   <div class="container method__grid">
     <div class="method__intro">
       <h2 class="method__title">Nos
-        <span class="method__scribble">
-          <span class="method__word">activités</span>
-          <svg class="method__spark" viewBox="0 0 34 34" aria-hidden="true"><path d="M8 20 L12 6 M17 24 L29 12" /></svg>
-          <svg class="method__underline" viewBox="0 0 232 44" preserveAspectRatio="none" aria-hidden="true"><path d="M4 22 C60 14 150 12 214 18" /><path d="M22 34 C90 26 170 26 228 36" /></svg>
-        </span>
+        <span class="scribble">activités</span>
       </h2>
       <p class="method__lead">Quatre façons de pratiquer, pour passer de la théorie à la vraie conversation.</p>
-      <figure class="method__photo"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Photo : une activité au TalkLab</span></div></figure>
+      <figure class="method__photo"><img class="ph-img" src="assets/img/instagram/DbDsbRftSWF.jpg" alt="Deux étudiants pendant un jeu de langue avec des ballons" width="800" height="1420" loading="lazy" decoding="async"></figure>
     </div>
     <ol class="method__steps">
       <li class="step step--1">
@@ -128,7 +133,7 @@
 <section class="xp">
   <div class="container xp__gallery">
     <div class="xp__head">
-      <h2 class="xp__subtitle">Le TalkLab en images</h2>
+      <h2 class="xp__subtitle">Le TalkLab en <span class="scribble">images</span></h2>
       <div class="filters" role="group" aria-label="Filtrer la galerie">
         <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Tout</button>
         <button type="button" class="filter" data-filter="conversations" aria-pressed="false">Conversations</button>
@@ -138,13 +143,13 @@
       </div>
     </div>
     <ul class="tiles">
-      <li class="tile tile--big" data-cat="conversations"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Conversation au TalkLab</span></div><span class="chip">Conversations</span></li>
-      <li class="tile" data-cat="jeux"><div class="ph"><span class="ph__icon ph__icon--play"></span><span class="ph__label">Vidéo : jeu de langue</span></div><span class="chip">Jeux</span></li>
-      <li class="tile tile--tall" data-cat="debats"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Débat en groupe</span></div><span class="chip">Débats</span></li>
-      <li class="tile" data-cat="events"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Soirée à thème</span></div><span class="chip">Événements</span></li>
-      <li class="tile tile--wide" data-cat="conversations"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Échange en petit groupe</span></div><span class="chip">Conversations</span></li>
-      <li class="tile" data-cat="jeux"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Quiz en équipe</span></div><span class="chip">Jeux</span></li>
-      <li class="tile" data-cat="debats"><div class="ph"><span class="ph__icon ph__icon--play"></span><span class="ph__label">Vidéo : débat</span></div><span class="chip">Débats</span></li>
+      <li class="tile tile--big" data-cat="conversations"><div class="photo-row photo-row--2"><img class="photo-row__img" src="assets/img/instagram/DXmmpJqDJwf.jpg" alt="Un étudiant prend la parole autour de la table" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="assets/img/instagram/Dd8u3z4N--g.jpg" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"></div><span class="chip">Conversations</span></li>
+      <li class="tile" data-cat="jeux"><img class="ph-img" src="assets/img/instagram/Dd8u3z4N--g.jpg" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Jeux</span></li>
+      <li class="tile tile--tall" data-cat="debats"><img class="ph-img" src="assets/img/instagram/DXmmpJqDJwf.jpg" alt="Un étudiant prend la parole autour de la table" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Débats</span></li>
+      <li class="tile" data-cat="events"><img class="ph-img" src="assets/img/instagram/DVbeFAijA2A.jpg" alt="Le hall d’UTALK Center, avec les kakémonos UTALK" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Événements</span></li>
+      <li class="tile tile--wide" data-cat="conversations"><img class="ph-img" src="assets/img/instagram/DXmmpJqDJwf.jpg" alt="Un étudiant prend la parole autour de la table" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Conversations</span></li>
+      <li class="tile" data-cat="jeux"><img class="ph-img" src="assets/img/instagram/DbDsbRftSWF.jpg" alt="Deux étudiants pendant un jeu de langue avec des ballons" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Jeux</span></li>
+      <li class="tile" data-cat="debats"><img class="ph-img" src="assets/img/instagram/DXmmpJqDJwf.jpg" alt="Un étudiant prend la parole autour de la table" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Débats</span></li>
     </ul>
   </div>
 </section>
@@ -180,6 +185,7 @@
       <p class="footer__head">Navigation</p>
       <a href="index.html">Accueil</a>
       <a href="langues.html">Langues</a>
+      <a href="preparation.html">Préparation</a>
       <a href="methode.html">Méthode</a>
       <a href="experience.html">Expérience</a>
       <a href="talklab.html">TalkLab</a>
@@ -199,9 +205,9 @@
 
     <div class="footer__col">
       <p class="footer__head">Contact</p>
-      <a href="tel:+212600000000">+212 6 00 00 00 00</a>
-      <a href="https://wa.me/212600000000" target="_blank" rel="noopener">WhatsApp</a>
-      <p>Centre-ville, Armée Royale<br>Immeuble 44, 12<sup>e</sup> étage<br>Casablanca</p>
+      <a href="tel:+212679757676">06 79 75 76 76</a>
+      <a href="https://wa.me/212679757676" target="_blank" rel="noopener">WhatsApp</a>
+      <p>Centre-ville, Avenue des FAR<br>Immeuble 44, 12<sup>e</sup> étage<br>Casablanca</p>
     </div>
   </div>
 

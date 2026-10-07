@@ -9,8 +9,15 @@
 <link rel="icon" type="image/png" href="assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/css/style.css">
+<script>/* intro: full on the first page of a visit, quick on the others */try{var d=document.documentElement;if(sessionStorage.getItem('utalk-intro')){d.classList.add('intro-play','intro-quick')}else{sessionStorage.setItem('utalk-intro','1');d.classList.add('intro-play')}}catch(e){}</script>
 </head>
 <body>
+<div class="intro" aria-hidden="true">
+  <div class="intro__inner">
+    <svg class="intro__mark" viewBox="0 0 353 380"><path class="intro__petal intro__petal--l" d="M0 0C72 16 142 66 142 138V380C58 374 0 318 0 236Z"/><path class="intro__petal intro__petal--r" d="M353 0C281 16 211 66 211 138V380C295 374 353 318 353 236Z"/></svg>
+    <span class="intro__bar"></span>
+  </div>
+</div>
 
 <header class="nav">
   <div class="container nav__inner">
@@ -21,6 +28,7 @@
     <nav class="nav__links" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <a href="langues.html">Langues</a>
+      <a href="preparation.html">Préparation</a>
       <a href="methode.html">Méthode</a>
       <a href="experience.html">Expérience</a>
       <a href="talklab.html">TalkLab</a>
@@ -38,6 +46,7 @@
   <nav class="nav__mobile" id="nav-mobile" aria-label="Navigation mobile" hidden>
     <a href="index.html">Accueil</a>
     <a href="langues.html">Langues</a>
+    <a href="preparation.html">Préparation</a>
     <a href="methode.html">Méthode</a>
     <a href="experience.html">Expérience</a>
     <a href="talklab.html">TalkLab</a>
@@ -52,7 +61,7 @@
 <section class="course-hero">
   <div class="container">
     <p class="label">Nos programmes</p>
-    <h1 class="course-hero__title page-hero__title">Choisissez votre programme</h1>
+    <h1 class="course-hero__title page-hero__title">Choisissez votre <span class="scribble">programme</span></h1>
     <p class="page-hero__lead">Quatre façons d’apprendre, un même objectif : vous faire parler.</p>
   </div>
 </section>
@@ -61,31 +70,31 @@
 <section class="lcards-sec">
   <div class="container lcards lcards--2">
       <a href="programmes/cours-de-langues.html" class="lcard lcard--fr">
-        <div class="lcard__media"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Photo : cours en groupe</span></div><span class="lcard__badge"><span class="lcard__num lcard__num--1">01</span>Programme</span></div>
+        <div class="lcard__media"><img class="ph-img" src="assets/img/stock/cours-de-langues.jpg" alt="Des étudiants souriants échangent pendant un cours" width="1400" height="788" loading="lazy" decoding="async"><span class="lcard__badge"><span class="lcard__num lcard__num--1">01</span>Programme</span></div>
         <h2 class="lcard__title">Cours de langues</h2>
         <p class="lcard__text">Des cours en groupe pour apprendre l’anglais, le français, l’allemand, l’espagnol ou l’italien, du niveau débutant au niveau avancé.</p>
-        <ul class="lcard__meta"><li><span class="side-ico side-ico--sparkle"></span>A1 → C1</li><li><span class="side-ico side-ico--group"></span>En groupe</li><li><span class="side-ico side-ico--chat"></span>5 langues</li></ul>
+        <ul class="lcard__meta"><li><span class="side-ico side-ico--sparkle"></span>A1 → C1</li><li><span class="side-ico side-ico--group"></span>En groupe</li><li><span class="side-ico side-ico--chat"></span>+5 langues</li></ul>
         <span class="lcard__foot">Voir le programme <span class="lcard__go" aria-hidden="true"></span></span>
       </a>
       <a href="programmes/communication-speaking.html" class="lcard lcard--en">
-        <div class="lcard__media"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Photo : atelier de prise de parole</span></div><span class="lcard__badge"><span class="lcard__num lcard__num--2">02</span>Programme</span></div>
+        <div class="lcard__media"><img class="ph-img" src="assets/img/stock/communication-speaking.jpg" alt="Une femme prend la parole au micro devant un groupe" width="1400" height="931" loading="lazy" decoding="async"><span class="lcard__badge"><span class="lcard__num lcard__num--2">02</span>Programme</span></div>
         <h2 class="lcard__title">Communication &amp; Speaking</h2>
         <p class="lcard__text">Des ateliers pour gagner en aisance à l’oral : prise de parole, débats et mises en situation.</p>
         <ul class="lcard__meta"><li><span class="side-ico side-ico--chat"></span>Expression orale</li><li><span class="side-ico side-ico--sparkle"></span>À partir de A2</li><li><span class="side-ico side-ico--group"></span>Ateliers en groupe</li></ul>
         <span class="lcard__foot">Voir le programme <span class="lcard__go" aria-hidden="true"></span></span>
       </a>
       <a href="programmes/cours-intensifs.html" class="lcard lcard--de">
-        <div class="lcard__media"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Photo : session intensive</span></div><span class="lcard__badge"><span class="lcard__num lcard__num--3">03</span>Programme</span></div>
+        <div class="lcard__media"><img class="ph-img" src="assets/img/stock/cours-intensifs.jpg" alt="Un groupe d’étudiants travaille ensemble autour d’un ordinateur" width="1400" height="788" loading="lazy" decoding="async"><span class="lcard__badge"><span class="lcard__num lcard__num--3">03</span>Programme</span></div>
         <h2 class="lcard__title">Cours intensifs</h2>
         <p class="lcard__text">Un rythme soutenu pour progresser vite, avant un examen, un voyage ou un nouveau poste.</p>
-        <ul class="lcard__meta"><li><span class="side-ico side-ico--calendar"></span>Progression rapide</li><li><span class="side-ico side-ico--chat"></span>5 langues</li><li><span class="side-ico side-ico--group"></span>Groupes &amp; individuels</li></ul>
+        <ul class="lcard__meta"><li><span class="side-ico side-ico--calendar"></span>Progression rapide</li><li><span class="side-ico side-ico--chat"></span>+5 langues</li><li><span class="side-ico side-ico--group"></span>Groupes &amp; individuels</li></ul>
         <span class="lcard__foot">Voir le programme <span class="lcard__go" aria-hidden="true"></span></span>
       </a>
       <a href="programmes/cours-individuels.html" class="lcard lcard--it">
-        <div class="lcard__media"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Photo : cours particulier</span></div><span class="lcard__badge"><span class="lcard__num lcard__num--4">04</span>Programme</span></div>
+        <div class="lcard__media"><img class="ph-img" src="assets/img/stock/cours-individuels.jpg" alt="Une professeure et une élève travaillent sur le même cahier" width="1400" height="933" loading="lazy" decoding="async"><span class="lcard__badge"><span class="lcard__num lcard__num--4">04</span>Programme</span></div>
         <h2 class="lcard__title">Cours individuels</h2>
         <p class="lcard__text">Un professeur rien que pour vous, avec un programme et des horaires adaptés à vos objectifs.</p>
-        <ul class="lcard__meta"><li><span class="side-ico side-ico--user"></span>1 : 1 · Sur mesure</li><li><span class="side-ico side-ico--chat"></span>5 langues</li><li><span class="side-ico side-ico--sparkle"></span>A1 → C1</li></ul>
+        <ul class="lcard__meta"><li><span class="side-ico side-ico--user"></span>One to One · Sur mesure</li><li><span class="side-ico side-ico--chat"></span>+5 langues</li><li><span class="side-ico side-ico--sparkle"></span>A1 → C1</li></ul>
         <span class="lcard__foot">Voir le programme <span class="lcard__go" aria-hidden="true"></span></span>
       </a>
       <a href="contact.html" class="lcard lcard--cta">
@@ -127,6 +136,7 @@
       <p class="footer__head">Navigation</p>
       <a href="index.html">Accueil</a>
       <a href="langues.html">Langues</a>
+      <a href="preparation.html">Préparation</a>
       <a href="methode.html">Méthode</a>
       <a href="experience.html">Expérience</a>
       <a href="talklab.html">TalkLab</a>
@@ -146,9 +156,9 @@
 
     <div class="footer__col">
       <p class="footer__head">Contact</p>
-      <a href="tel:+212600000000">+212 6 00 00 00 00</a>
-      <a href="https://wa.me/212600000000" target="_blank" rel="noopener">WhatsApp</a>
-      <p>Centre-ville, Armée Royale<br>Immeuble 44, 12<sup>e</sup> étage<br>Casablanca</p>
+      <a href="tel:+212679757676">06 79 75 76 76</a>
+      <a href="https://wa.me/212679757676" target="_blank" rel="noopener">WhatsApp</a>
+      <p>Centre-ville, Avenue des FAR<br>Immeuble 44, 12<sup>e</sup> étage<br>Casablanca</p>
     </div>
   </div>
 

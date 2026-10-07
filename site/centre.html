@@ -9,8 +9,15 @@
 <link rel="icon" type="image/png" href="assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/css/style.css">
+<script>/* intro: full on the first page of a visit, quick on the others */try{var d=document.documentElement;if(sessionStorage.getItem('utalk-intro')){d.classList.add('intro-play','intro-quick')}else{sessionStorage.setItem('utalk-intro','1');d.classList.add('intro-play')}}catch(e){}</script>
 </head>
 <body>
+<div class="intro" aria-hidden="true">
+  <div class="intro__inner">
+    <svg class="intro__mark" viewBox="0 0 353 380"><path class="intro__petal intro__petal--l" d="M0 0C72 16 142 66 142 138V380C58 374 0 318 0 236Z"/><path class="intro__petal intro__petal--r" d="M353 0C281 16 211 66 211 138V380C295 374 353 318 353 236Z"/></svg>
+    <span class="intro__bar"></span>
+  </div>
+</div>
 
 <header class="nav">
   <div class="container nav__inner">
@@ -21,6 +28,7 @@
     <nav class="nav__links" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <a href="langues.html">Langues</a>
+      <a href="preparation.html">Préparation</a>
       <a href="methode.html">Méthode</a>
       <a href="experience.html">Expérience</a>
       <a href="talklab.html">TalkLab</a>
@@ -38,6 +46,7 @@
   <nav class="nav__mobile" id="nav-mobile" aria-label="Navigation mobile" hidden>
     <a href="index.html">Accueil</a>
     <a href="langues.html">Langues</a>
+    <a href="preparation.html">Préparation</a>
     <a href="methode.html">Méthode</a>
     <a href="experience.html">Expérience</a>
     <a href="talklab.html">TalkLab</a>
@@ -51,34 +60,38 @@
 <!-- ============ 1. TITLE + WIDE PHOTO (ref: BrightMind /about header: H1 90 centered, photo 1240×600 r16) ============ -->
 <section class="about-hero">
   <div class="container">
-    <h1 class="about-hero__title">À propos d’<span class="accent">UTALK</span></h1>
+    <h1 class="about-hero__title">À propos d’<span class="scribble">UTALK</span></h1>
     <p class="about-hero__lead">Un centre de langues et de communication au cœur de Casablanca, où l’on apprend en parlant.</p>
-    <figure class="about-hero__photo"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Photo réelle : le centre UTALK</span></div></figure>
+    <figure class="about-hero__photo"><img class="ph-img" src="assets/img/instagram/DdYjCJtNuX3.jpg" alt="L’accueil d’UTALK Center, avec le logo et les drapeaux des cinq langues" width="800" height="1420" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
 <!-- ============ 2. QUI SOMMES-NOUS (ref: BrightMind "Inspiring Journey" split) ============ -->
 <section class="journey">
-  <div class="container journey__grid">
+  <div class="container">
+    <div class="sec-head">
+      <h2 class="journey__title"><span class="scribble">Qui</span> sommes-nous ?</h2>
+    </div>
+    <div class="journey__grid">
     <div class="journey__body">
-      <h2 class="journey__title"><span class="accent">Qui</span> sommes-nous ?</h2>
       <p class="journey__lead">UTALK Center est un centre de formation en langues et en communication, installé au centre-ville de Casablanca. On y apprend l’anglais, le français, l’allemand, l’espagnol et l’italien.</p>
       <ul class="checklist">
-          <li><span class="check" aria-hidden="true"></span><span>5 langues, du niveau A1 au niveau C1</span></li>
+          <li><span class="check" aria-hidden="true"></span><span>+5 langues, du niveau A1 au niveau C1</span></li>
           <li><span class="check" aria-hidden="true"></span><span>Cours en groupe et cours individuels</span></li>
           <li><span class="check" aria-hidden="true"></span><span>Le TalkLab pour pratiquer l’oral</span></li>
-          <li><span class="check" aria-hidden="true"></span><span>Au 12<sup>e</sup> étage de l’Immeuble 44, Armée Royale</span></li>
+          <li><span class="check" aria-hidden="true"></span><span>Au 12<sup>e</sup> étage de l’Immeuble 44, avenue des FAR</span></li>
       </ul>
       <a href="index.html#programmes" class="btn btn--primary">Nos programmes</a>
     </div>
-    <figure class="journey__photo"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Photo : un cours au centre</span></div></figure>
+    <figure class="journey__photo"><img class="ph-img" src="assets/img/instagram/DavO0NTNy_q.jpg" alt="Des étudiantes rient pendant une activité devant l’écran interactif" width="800" height="1420" loading="lazy" decoding="async"></figure>
+    </div>
   </div>
 </section>
 
 <!-- ============ 3. NOTRE PHILOSOPHIE (ref: BrightMind "Our Core Values" 4 pastel cards) ============ -->
 <section class="core-values">
   <div class="container">
-    <h2 class="section-title core-values__title">Notre <span class="accent">philosophie</span></h2>
+    <h2 class="section-title core-values__title">Notre <span class="scribble">philosophie</span></h2>
     <div class="core-values__grid">
       <div class="value-card value-card--en">
         <span class="value-card__ico"><span class="side-ico side-ico--chat"></span></span>
@@ -107,15 +120,15 @@
 <!-- ============ 4. LE CENTRE EN IMAGES (home gallery grid) ============ -->
 <section class="xp">
   <div class="container xp__gallery">
-    <div class="xp__head"><h2 class="xp__subtitle">Le centre en images</h2></div>
+    <div class="xp__head"><h2 class="xp__subtitle">Le centre en <span class="scribble">images</span></h2></div>
     <ul class="tiles">
-      <li class="tile tile--big"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Photo : l’accueil</span></div></li>
-      <li class="tile"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Salle de cours</span></div></li>
-      <li class="tile tile--tall"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Le TalkLab</span></div></li>
-      <li class="tile"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Espace détente</span></div></li>
-      <li class="tile tile--wide"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Vue du 12ᵉ étage</span></div></li>
-      <li class="tile"><div class="ph"><span class="ph__icon"></span><span class="ph__label">Salle de cours</span></div></li>
-      <li class="tile"><div class="ph"><span class="ph__icon"></span><span class="ph__label">L’équipe</span></div></li>
+      <li class="tile tile--big"><div class="photo-row photo-row--2"><img class="photo-row__img" src="assets/img/instagram/DdYjCJtNuX3.jpg" alt="L’accueil d’UTALK Center, avec le logo et les drapeaux des cinq langues" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="assets/img/instagram/DdgZwF1tbxp.jpg" alt="L’accueil et le logo lumineux UTALK" width="800" height="1420" loading="lazy" decoding="async"></div></li>
+      <li class="tile"><img class="ph-img" src="assets/img/instagram/hl-salle.jpg" alt="Des étudiants dans une salle de cours lumineuse" width="800" height="1420" loading="lazy" decoding="async"></li>
+      <li class="tile tile--tall"><img class="ph-img" src="assets/img/instagram/Dd8u3z4N--g.jpg" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"></li>
+      <li class="tile"><img class="ph-img" src="assets/img/instagram/hl-couloir.jpg" alt="Le couloir du centre, décoré aux couleurs d’UTALK" width="800" height="1420" loading="lazy" decoding="async"></li>
+      <li class="tile tile--wide"><div class="photo-row photo-row--2"><img class="photo-row__img" src="assets/img/instagram/hl-vue-12e.jpg" alt="Vue sur le centre-ville de Casablanca depuis le 12e étage" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="assets/img/instagram/hl-couloir.jpg" alt="Le couloir du centre, décoré aux couleurs d’UTALK" width="800" height="1420" loading="lazy" decoding="async"></div></li>
+      <li class="tile"><img class="ph-img" src="assets/img/instagram/DavO0NTNy_q.jpg" alt="Des étudiantes rient pendant une activité devant l’écran interactif" width="800" height="1420" loading="lazy" decoding="async"></li>
+      <li class="tile"><img class="ph-img" src="assets/img/instagram/DdrEsgFtw_t.jpg" alt="Une conseillère UTALK reçoit un futur étudiant" width="800" height="1420" loading="lazy" decoding="async"></li>
     </ul>
   </div>
 </section>
@@ -127,10 +140,10 @@
       <span class="visit__pin" aria-hidden="true"></span>
       <div class="find__text">
         <p class="find__title">Où nous trouver</p>
-        <p class="find__addr">Centre-ville de Casablanca · Armée Royale, Immeuble 44 · 12<sup>e</sup> étage</p>
+        <p class="find__addr">Centre-ville de Casablanca · Avenue des FAR, Immeuble 44 · 12<sup>e</sup> étage</p>
       </div>
       <div class="find__actions">
-        <a class="visit__link" href="https://www.google.com/maps/search/?api=1&amp;query=Armée+Royale+Immeuble+44+Casablanca" target="_blank" rel="noopener"><span class="visit__ico visit__ico--map"></span>Google Maps</a>
+        <a class="visit__link" href="https://maps.app.goo.gl/e17wGBvnFKSBTmkc7" target="_blank" rel="noopener"><span class="visit__ico visit__ico--map"></span>Google Maps</a>
         <a class="visit__link" href="contact.html"><span class="visit__ico visit__ico--phone"></span>Nous contacter</a>
       </div>
     </div>
@@ -168,6 +181,7 @@
       <p class="footer__head">Navigation</p>
       <a href="index.html">Accueil</a>
       <a href="langues.html">Langues</a>
+      <a href="preparation.html">Préparation</a>
       <a href="methode.html">Méthode</a>
       <a href="experience.html">Expérience</a>
       <a href="talklab.html">TalkLab</a>
@@ -187,9 +201,9 @@
 
     <div class="footer__col">
       <p class="footer__head">Contact</p>
-      <a href="tel:+212600000000">+212 6 00 00 00 00</a>
-      <a href="https://wa.me/212600000000" target="_blank" rel="noopener">WhatsApp</a>
-      <p>Centre-ville, Armée Royale<br>Immeuble 44, 12<sup>e</sup> étage<br>Casablanca</p>
+      <a href="tel:+212679757676">06 79 75 76 76</a>
+      <a href="https://wa.me/212679757676" target="_blank" rel="noopener">WhatsApp</a>
+      <p>Centre-ville, Avenue des FAR<br>Immeuble 44, 12<sup>e</sup> étage<br>Casablanca</p>
     </div>
   </div>
 
