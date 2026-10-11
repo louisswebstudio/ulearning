@@ -21,7 +21,7 @@ get_header();
 <section class="course">
   <div class="container course__grid">
     <div class="course__main">
-      <figure class="course__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DXmmpJqDJwf.jpg' ) ); ?>" alt="Un étudiant prend la parole autour de la table" width="800" height="1420" loading="lazy" decoding="async"></figure>
+      <figure class="course__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/prof-bureau-anglais.jpg' ) ); ?>" alt="Un professeur d’anglais à son bureau, à côté du drapeau américain" width="1050" height="1400" loading="lazy" decoding="async"></figure>
 
       <h2 class="course__h">À propos du cours</h2>
       <p class="course__p">Nos cours d’anglais vous font parler dès la première séance. En petit groupe ou en cours individuel, vous progressez niveau par niveau avec des professeurs qui mettent l’oral au centre de chaque cours.</p>

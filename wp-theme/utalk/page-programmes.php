@@ -21,28 +21,28 @@ get_header();
 <section class="lcards-sec">
   <div class="container lcards lcards--2">
       <a href="<?php echo esc_url( utalk_url( 'programmes/cours-de-langues' ) ); ?>" class="lcard lcard--fr">
-        <div class="lcard__media"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/stock/cours-de-langues.jpg' ) ); ?>" alt="Des étudiants souriants échangent pendant un cours" width="1400" height="788" loading="lazy" decoding="async"><span class="lcard__badge"><span class="lcard__num lcard__num--1">01</span>Programme</span></div>
+        <div class="lcard__media"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/cours-en-classe.jpg' ) ); ?>" alt="Des étudiantes suivent un cours en petit groupe avec leur professeur" width="1057" height="1400" loading="lazy" decoding="async"><span class="lcard__badge"><span class="lcard__num lcard__num--1">01</span>Programme</span></div>
         <h2 class="lcard__title">Cours de langues</h2>
-        <p class="lcard__text">Des cours en groupe pour apprendre l’anglais, le français, l’allemand, l’espagnol ou l’italien, du niveau débutant au niveau avancé.</p>
+        <p class="lcard__text">Des cours en groupe pour apprendre l’anglais, le français, l’allemand, l’espagnol, l’italien, le turc, le russe, le coréen ou le chinois, du niveau débutant au niveau avancé.</p>
         <ul class="lcard__meta"><li><span class="side-ico side-ico--sparkle"></span>A1 → C1</li><li><span class="side-ico side-ico--group"></span>En groupe</li><li><span class="side-ico side-ico--chat"></span>+5 langues</li></ul>
         <span class="lcard__foot">Voir le programme <span class="lcard__go" aria-hidden="true"></span></span>
       </a>
       <a href="<?php echo esc_url( utalk_url( 'programmes/communication-speaking' ) ); ?>" class="lcard lcard--en">
-        <div class="lcard__media"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/stock/communication-speaking.jpg' ) ); ?>" alt="Une femme prend la parole au micro devant un groupe" width="1400" height="931" loading="lazy" decoding="async"><span class="lcard__badge"><span class="lcard__num lcard__num--2">02</span>Programme</span></div>
+        <div class="lcard__media"><img class="ph-img" style="object-position: 50% 8%" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/prof-paperboard.jpg' ) ); ?>" alt="Un professeur anime le cours devant le paperboard" width="1050" height="1400" loading="lazy" decoding="async"><span class="lcard__badge"><span class="lcard__num lcard__num--2">02</span>Programme</span></div>
         <h2 class="lcard__title">Communication &amp; Speaking</h2>
         <p class="lcard__text">Des ateliers pour gagner en aisance à l’oral : prise de parole, débats et mises en situation.</p>
         <ul class="lcard__meta"><li><span class="side-ico side-ico--chat"></span>Expression orale</li><li><span class="side-ico side-ico--sparkle"></span>À partir de A2</li><li><span class="side-ico side-ico--group"></span>Ateliers en groupe</li></ul>
         <span class="lcard__foot">Voir le programme <span class="lcard__go" aria-hidden="true"></span></span>
       </a>
       <a href="<?php echo esc_url( utalk_url( 'programmes/cours-intensifs' ) ); ?>" class="lcard lcard--de">
-        <div class="lcard__media"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/stock/cours-intensifs.jpg' ) ); ?>" alt="Un groupe d’étudiants travaille ensemble autour d’un ordinateur" width="1400" height="788" loading="lazy" decoding="async"><span class="lcard__badge"><span class="lcard__num lcard__num--3">03</span>Programme</span></div>
+        <div class="lcard__media"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/seance-grand-groupe.jpg' ) ); ?>" alt="Une séance en grand groupe dans l’espace culturel du centre" width="1050" height="1400" loading="lazy" decoding="async"><span class="lcard__badge"><span class="lcard__num lcard__num--3">03</span>Programme</span></div>
         <h2 class="lcard__title">Cours intensifs</h2>
         <p class="lcard__text">Un rythme soutenu pour progresser vite, avant un examen, un voyage ou un nouveau poste.</p>
         <ul class="lcard__meta"><li><span class="side-ico side-ico--calendar"></span>Progression rapide</li><li><span class="side-ico side-ico--chat"></span>+5 langues</li><li><span class="side-ico side-ico--group"></span>Groupes &amp; individuels</li></ul>
         <span class="lcard__foot">Voir le programme <span class="lcard__go" aria-hidden="true"></span></span>
       </a>
       <a href="<?php echo esc_url( utalk_url( 'programmes/cours-individuels' ) ); ?>" class="lcard lcard--it">
-        <div class="lcard__media"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/stock/cours-individuels.jpg' ) ); ?>" alt="Une professeure et une élève travaillent sur le même cahier" width="1400" height="933" loading="lazy" decoding="async"><span class="lcard__badge"><span class="lcard__num lcard__num--4">04</span>Programme</span></div>
+        <div class="lcard__media"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/prof-bureau-anglais.jpg' ) ); ?>" alt="Un professeur d’anglais à son bureau, à côté du drapeau américain" width="1050" height="1400" loading="lazy" decoding="async"><span class="lcard__badge"><span class="lcard__num lcard__num--4">04</span>Programme</span></div>
         <h2 class="lcard__title">Cours individuels</h2>
         <p class="lcard__text">Un professeur rien que pour vous, avec un programme et des horaires adaptés à vos objectifs.</p>
         <ul class="lcard__meta"><li><span class="side-ico side-ico--user"></span>One to One · Sur mesure</li><li><span class="side-ico side-ico--chat"></span>+5 langues</li><li><span class="side-ico side-ico--sparkle"></span>A1 → C1</li></ul>

@@ -21,7 +21,7 @@ get_header();
 <section class="course">
   <div class="container course__grid">
     <div class="course__main">
-      <figure class="course__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/Dd8u3z4N--g.jpg' ) ); ?>" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"></figure>
+      <figure class="course__photo"><img class="ph-img" style="object-position: 20% 15%" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/drapeaux-never-stop-smiling.jpg' ) ); ?>" alt="Des drapeaux espagnol et français sur un bureau, avec un post-it « Never stop smiling »" width="1050" height="1400" loading="lazy" decoding="async"></figure>
 
       <h2 class="course__h">À propos du cours</h2>
       <p class="course__p">Une langue parlée sur quatre continents, et rapide à prendre en main quand on parle déjà français. Nos cours d’espagnol vous font parler très vite, avec plaisir.</p>

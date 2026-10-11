@@ -21,7 +21,7 @@ get_header();
 <section class="course">
   <div class="container course__grid">
     <div class="course__main">
-      <figure class="course__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/stock/cours-individuels.jpg' ) ); ?>" alt="Une professeure et une élève travaillent sur le même cahier" width="1400" height="933" loading="lazy" decoding="async"></figure>
+      <figure class="course__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/prof-bureau-anglais.jpg' ) ); ?>" alt="Un professeur d’anglais à son bureau, à côté du drapeau américain" width="1050" height="1400" loading="lazy" decoding="async"></figure>
 
       <h2 class="course__h">À propos du cours</h2>
       <p class="course__p">Un professeur rien que pour vous, avec un programme et des horaires adaptés à vos objectifs. Vous avancez à votre rythme, et chaque minute du cours est consacrée à vos besoins.</p>

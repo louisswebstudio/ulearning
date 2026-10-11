@@ -20,7 +20,7 @@ get_header();
 <!-- ============ VIDEO BANNER (ref: Kidora "Discover our learning space") ============ -->
 <section class="xp">
   <div class="xp__banner">
-    <div class="xp__media photo-row photo-row--4"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DVbeFAijA2A.jpg' ) ); ?>" alt="Le hall d’UTALK Center, avec les kakémonos UTALK" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DdYjCJtNuX3.jpg' ) ); ?>" alt="L’accueil d’UTALK Center, avec le logo et les drapeaux des cinq langues" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DdgZwF1tbxp.jpg' ) ); ?>" alt="L’accueil et le logo lumineux UTALK" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DdTmEAyNO6t.jpg' ) ); ?>" alt="Devant l’affiche UTALK, à l’entrée du 12e étage" width="800" height="1420" loading="lazy" decoding="async"></div>
+    <div class="xp__media photo-row photo-row--4"><video class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/cours-jeu-de-questions.mp4' ) ); ?>" poster="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/cours-jeu-de-questions.jpg' ) ); ?>" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DdYjCJtNuX3.jpg' ) ); ?>" alt="L’accueil d’UTALK Center, avec le logo et les drapeaux des cinq langues" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/hl-classe.jpg' ) ); ?>" alt="Des étudiantes échangent autour de la grande table du TalkLab" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DdTmEAyNO6t.jpg' ) ); ?>" alt="Devant l’affiche UTALK, à l’entrée du 12e étage" width="800" height="1420" loading="lazy" decoding="async"></div>
     <div class="xp__overlay"></div>
     <div class="container xp__banner-inner">
       <p class="eyebrow eyebrow--light">✦ Au cœur du centre</p>
@@ -40,8 +40,9 @@ get_header();
 <!-- ============ GALLERY: Instagram reels, filters as on the home page ============ -->
 <section class="xp">
   <div class="container xp__gallery">
-    <div class="xp__head">
-      <h2 class="xp__subtitle">Le centre en <span class="scribble">vidéos</span></h2>
+    <div class="sec-head">
+      <h2 class="section-title">Le centre en <span class="scribble">vidéos</span></h2>
+      <p>Nos reels Instagram : cours, activités et coulisses du centre.</p>
       <div class="filters" role="group" aria-label="Filtrer les vidéos">
         <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Tout</button>
         <button type="button" class="filter" data-filter="centre" aria-pressed="false">UTALK Center</button>
@@ -64,7 +65,7 @@ get_header();
       <li class="tile" data-cat="communication"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DYj_qf_scYO/" target="_blank" rel="noopener" aria-label="Une étudiante en salle de cours (vidéo Instagram)"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DYj_qf_scYO.jpg' ) ); ?>" alt="" width="800" height="1420" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">Communication</span></a></li>
       <li class="tile" data-cat="centre"><a class="reel" href="https://www.instagram.com/utalk_center/reel/DVbeFAijA2A/" target="_blank" rel="noopener" aria-label="Le couloir et l’espace d’accueil (vidéo Instagram)"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DVbeFAijA2A.jpg' ) ); ?>" alt="" width="800" height="1420" loading="lazy"><span class="reel__play" aria-hidden="true"></span><span class="chip">UTALK Center</span></a></li>
     </ul>
-    <div class="xp__more">
+    <div class="sec-foot">
       <a href="https://www.instagram.com/utalk_center/" class="btn-pill" target="_blank" rel="noopener">Suivez-nous sur Instagram <span class="btn-pill__icon" aria-hidden="true"></span></a>
     </div>
   </div>

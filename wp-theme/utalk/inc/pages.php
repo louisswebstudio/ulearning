@@ -10,15 +10,19 @@ defined( 'ABSPATH' ) || exit;
 
 function utalk_pages() {
 	return array(
-		array( '', 'Accueil', 'UTALK Center, centre de langues à Casablanca : English, Français, Deutsch, Español, Italiano.' ),
-		array( 'langues', 'Nos langues', 'Cours d’anglais, de français, d’allemand, d’espagnol et d’italien à Casablanca, du niveau A1 au C1.' ),
+		array( '', 'Accueil', 'UTALK Center, centre de langues à Casablanca : English, Français, Deutsch, Español, Italiano, Türkçe, Русский, 한국어, 中文.' ),
+		array( 'langues', 'Nos langues', 'Cours d’anglais, de français, d’allemand, d’espagnol, d’italien, de turc, de russe, de coréen et de chinois à Casablanca, du niveau A1 au C1.' ),
 		array( 'langues/english', 'English', 'Cours d’anglais à Casablanca chez UTALK Center : niveaux A1 à C1, en groupe ou en individuel.' ),
 		array( 'langues/francais', 'Français', 'Cours de français à Casablanca chez UTALK Center : niveaux A1 à C1, en groupe ou en individuel.' ),
 		array( 'langues/deutsch', 'Deutsch', 'Cours d’allemand à Casablanca chez UTALK Center : niveaux A1 à C1, en groupe ou en individuel.' ),
 		array( 'langues/espanol', 'Español', 'Cours d’espagnol à Casablanca chez UTALK Center : niveaux A1 à C1, en groupe ou en individuel.' ),
 		array( 'langues/italiano', 'Italiano', 'Cours d’italien à Casablanca chez UTALK Center : niveaux A1 à C1, en groupe ou en individuel.' ),
+		array( 'langues/turc', 'Türkçe', 'Cours de turc à Casablanca chez UTALK Center : niveaux A1 à C1, en groupe ou en individuel.' ),
+		array( 'langues/russe', 'Русский', 'Cours de russe à Casablanca chez UTALK Center : niveaux A1 à C1, en groupe ou en individuel.' ),
+		array( 'langues/coreen', '한국어', 'Cours de coréen à Casablanca chez UTALK Center : niveaux A1 à C1, en groupe ou en individuel.' ),
+		array( 'langues/chinois', '中文', 'Cours de chinois à Casablanca chez UTALK Center : niveaux A1 à C1, en groupe ou en individuel.' ),
 		array( 'programmes', 'Nos programmes', 'Les programmes d’UTALK Center à Casablanca : cours de langues, communication & speaking, cours intensifs et cours individuels.' ),
-		array( 'programmes/cours-de-langues', 'Cours de langues', 'Cours de langues en groupe à Casablanca : anglais, français, allemand, espagnol, italien.' ),
+		array( 'programmes/cours-de-langues', 'Cours de langues', 'Cours de langues en groupe à Casablanca : anglais, français, allemand, espagnol, italien, turc, russe, coréen, chinois.' ),
 		array( 'programmes/communication-speaking', 'Communication & Speaking', 'Ateliers de communication et de prise de parole à Casablanca : débats, mises en situation, entretiens.' ),
 		array( 'programmes/cours-intensifs', 'Cours intensifs', 'Cours de langues intensifs à Casablanca : progresser vite avant un examen, un voyage ou un nouveau poste.' ),
 		array( 'programmes/cours-individuels', 'Cours individuels', 'Cours de langues individuels à Casablanca : un professeur pour vous seul, un programme et des horaires sur mesure.' ),

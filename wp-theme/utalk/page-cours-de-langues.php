@@ -21,10 +21,10 @@ get_header();
 <section class="course">
   <div class="container course__grid">
     <div class="course__main">
-      <figure class="course__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/stock/cours-de-langues.jpg' ) ); ?>" alt="Des étudiants souriants échangent pendant un cours" width="1400" height="788" loading="lazy" decoding="async"></figure>
+      <figure class="course__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/cours-en-classe.jpg' ) ); ?>" alt="Des étudiantes suivent un cours en petit groupe avec leur professeur" width="1057" height="1400" loading="lazy" decoding="async"></figure>
 
       <h2 class="course__h">À propos du cours</h2>
-      <p class="course__p">Le programme principal d’UTALK : des cours en groupe pour apprendre l’anglais, le français, l’allemand, l’espagnol ou l’italien, du niveau débutant au niveau avancé, avec l’oral au centre de chaque séance.</p>
+      <p class="course__p">Le programme principal d’UTALK : des cours en groupe pour apprendre l’anglais, le français, l’allemand, l’espagnol, l’italien, le turc, le russe, le coréen ou le chinois, du niveau débutant au niveau avancé, avec l’oral au centre de chaque séance.</p>
 
 
       <h2 class="course__h">Ce que vous allez apprendre</h2>

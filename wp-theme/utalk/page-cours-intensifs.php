@@ -21,7 +21,7 @@ get_header();
 <section class="course">
   <div class="container course__grid">
     <div class="course__main">
-      <figure class="course__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/stock/cours-intensifs.jpg' ) ); ?>" alt="Un groupe d’étudiants travaille ensemble autour d’un ordinateur" width="1400" height="788" loading="lazy" decoding="async"></figure>
+      <figure class="course__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/seance-grand-groupe.jpg' ) ); ?>" alt="Une séance en grand groupe dans l’espace culturel du centre" width="1050" height="1400" loading="lazy" decoding="async"></figure>
 
       <h2 class="course__h">À propos du cours</h2>
       <p class="course__p">Un rythme soutenu pour progresser vite, avant un examen, un voyage ou un nouveau poste. Plus d’heures par semaine, un objectif clair, et l’oral toujours au centre.</p>

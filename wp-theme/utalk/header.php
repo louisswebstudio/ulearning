@@ -41,7 +41,7 @@
       <a href="<?php echo esc_url( utalk_url( 'contact' ) ); ?>"<?php utalk_current( 'contact' ); ?>>Contact</a>
     </nav>
 
-    <a href="<?php echo esc_url( utalk_url( '', '#contact' ) ); ?>" class="btn btn--primary nav__cta">Commencer <span aria-hidden="true">→</span></a>
+    <a href="<?php echo esc_url( utalk_url( '', '#contact' ) ); ?>" class="btn btn--primary nav__cta">Commencer</a>
 
     <button class="nav__burger" id="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-mobile">
       <span></span><span></span><span></span>
@@ -57,7 +57,7 @@
     <a href="<?php echo esc_url( utalk_url( 'talklab' ) ); ?>"<?php utalk_current( 'talklab' ); ?>>TalkLab</a>
     <a href="<?php echo esc_url( utalk_url( 'etudiants' ) ); ?>"<?php utalk_current( 'etudiants' ); ?>>Étudiants</a>
     <a href="<?php echo esc_url( utalk_url( 'contact' ) ); ?>"<?php utalk_current( 'contact' ); ?>>Contact</a>
-    <a href="<?php echo esc_url( utalk_url( '', '#contact' ) ); ?>" class="btn btn--primary">Commencer <span aria-hidden="true">→</span></a>
+    <a href="<?php echo esc_url( utalk_url( '', '#contact' ) ); ?>" class="btn btn--primary">Commencer</a>
   </nav>
 </header>
 

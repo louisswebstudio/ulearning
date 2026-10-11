@@ -21,7 +21,7 @@ get_header();
 <section class="course">
   <div class="container course__grid">
     <div class="course__main">
-      <figure class="course__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/stock/communication-speaking.jpg' ) ); ?>" alt="Une femme prend la parole au micro devant un groupe" width="1400" height="931" loading="lazy" decoding="async"></figure>
+      <figure class="course__photo"><img class="ph-img" style="object-position: 50% 8%" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/prof-paperboard.jpg' ) ); ?>" alt="Un professeur anime le cours devant le paperboard" width="1050" height="1400" loading="lazy" decoding="async"></figure>
 
       <h2 class="course__h">À propos du cours</h2>
       <p class="course__p">Des ateliers pour gagner en aisance à l’oral : prise de parole, débats et mises en situation. Moins de théorie, plus de pratique : vous parlez, on vous fait progresser.</p>

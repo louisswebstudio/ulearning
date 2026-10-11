@@ -44,6 +44,10 @@ get_header();
             <option>Deutsch</option>
             <option>Español</option>
             <option>Italiano</option>
+            <option lang="tr">Türkçe</option>
+            <option lang="ru">Русский</option>
+            <option lang="ko">한국어</option>
+            <option lang="zh">中文</option>
           </select>
         </div>
       </div>
@@ -59,8 +63,8 @@ get_header();
 
     <div class="visit">
       <h2 class="visit__title">UTALK Center <span class="accent">Casablanca</span></h2>
-      <figure class="visit__photo">
-        <img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DVbeFAijA2A.jpg' ) ); ?>" alt="Le hall d’UTALK Center, avec les kakémonos UTALK" width="800" height="1420" loading="lazy" decoding="async">
+      <figure class="visit__photo visit__photo--map">
+        <iframe title="Carte Google Maps : UTALK Center, Avenue des FAR, Immeuble 44, Casablanca" src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!3m2!1m1!4s12848810503530612854" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <figcaption class="visit__pill">
           <span>Centre-ville · Avenue des FAR, Immeuble 44 · 12<sup>e</sup> étage</span>
           <span class="visit__pin" aria-hidden="true"></span>

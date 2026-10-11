@@ -20,7 +20,7 @@ get_header();
 <!-- ============ VIDEO BANNER (ref: Kidora "Discover our learning space") ============ -->
 <section class="xp">
   <div class="xp__banner">
-    <div class="xp__media photo-row photo-row--4"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/Dd8u3z4N--g.jpg' ) ); ?>" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DbDsbRftSWF.jpg' ) ); ?>" alt="Deux étudiants pendant un jeu de langue avec des ballons" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DXmmpJqDJwf.jpg' ) ); ?>" alt="Un étudiant prend la parole autour de la table" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DavO0NTNy_q.jpg' ) ); ?>" alt="Des étudiantes rient pendant une activité devant l’écran interactif" width="800" height="1420" loading="lazy" decoding="async"></div>
+    <div class="xp__media photo-row photo-row--4"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/conversation-talklab.jpg' ) ); ?>" alt="Deux étudiants discutent autour de la table du TalkLab" width="1050" height="1400" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/talklab-cartes-mafia.jpg' ) ); ?>" alt="Les cartes du jeu Mafia, utilisées au TalkLab" width="1050" height="1400" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/talklab-uno.jpg' ) ); ?>" alt="Une partie de UNO au TalkLab" width="787" height="1400" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/jeux-de-societe.jpg' ) ); ?>" alt="Des étudiants réunis autour des jeux de société du centre" width="796" height="1400" loading="lazy" decoding="async"></div>
     <div class="xp__overlay"></div>
     <div class="container xp__banner-inner">
       <p class="eyebrow eyebrow--light">✦ Au cœur du TalkLab</p>
@@ -39,13 +39,14 @@ get_header();
 
 <!-- ============ ACTIVITIES (ref: Brightpath "How it works" tilted cards) ============ -->
 <section class="method">
-  <div class="container method__grid">
+  <div class="container">
+    <div class="sec-head">
+      <h2 class="section-title">Nos <span class="scribble">activités</span></h2>
+      <p>Quatre façons de pratiquer, pour passer de la théorie à la vraie conversation.</p>
+    </div>
+    <div class="method__grid">
     <div class="method__intro">
-      <h2 class="method__title">Nos
-        <span class="scribble">activités</span>
-      </h2>
-      <p class="method__lead">Quatre façons de pratiquer, pour passer de la théorie à la vraie conversation.</p>
-      <figure class="method__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DbDsbRftSWF.jpg' ) ); ?>" alt="Deux étudiants pendant un jeu de langue avec des ballons" width="800" height="1420" loading="lazy" decoding="async"></figure>
+      <figure class="method__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/classe-table-discussion.jpg' ) ); ?>" alt="Un professeur anime un échange avec un groupe d’étudiants autour de la table" width="1290" height="847" loading="lazy" decoding="async"></figure>
     </div>
     <ol class="method__steps">
       <li class="step step--1">
@@ -77,14 +78,16 @@ get_header();
         </div>
       </li>
     </ol>
+    </div>
   </div>
 </section>
 
 <!-- ============ GALLERY (filters, as on the home page) ============ -->
 <section class="xp">
   <div class="container xp__gallery">
-    <div class="xp__head">
-      <h2 class="xp__subtitle">Le TalkLab en <span class="scribble">images</span></h2>
+    <div class="sec-head">
+      <h2 class="section-title">Le TalkLab en <span class="scribble">images</span></h2>
+      <p>Conversations, débats, jeux et soirées : le TalkLab en photos.</p>
       <div class="filters" role="group" aria-label="Filtrer la galerie">
         <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Tout</button>
         <button type="button" class="filter" data-filter="conversations" aria-pressed="false">Conversations</button>
@@ -94,13 +97,13 @@ get_header();
       </div>
     </div>
     <ul class="tiles">
-      <li class="tile tile--big" data-cat="conversations"><div class="photo-row photo-row--2"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DXmmpJqDJwf.jpg' ) ); ?>" alt="Un étudiant prend la parole autour de la table" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/Dd8u3z4N--g.jpg' ) ); ?>" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"></div><span class="chip">Conversations</span></li>
-      <li class="tile" data-cat="jeux"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/Dd8u3z4N--g.jpg' ) ); ?>" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Jeux</span></li>
-      <li class="tile tile--tall" data-cat="debats"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DXmmpJqDJwf.jpg' ) ); ?>" alt="Un étudiant prend la parole autour de la table" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Débats</span></li>
-      <li class="tile" data-cat="events"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DVbeFAijA2A.jpg' ) ); ?>" alt="Le hall d’UTALK Center, avec les kakémonos UTALK" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Événements</span></li>
-      <li class="tile tile--wide" data-cat="conversations"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DXmmpJqDJwf.jpg' ) ); ?>" alt="Un étudiant prend la parole autour de la table" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Conversations</span></li>
-      <li class="tile" data-cat="jeux"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DbDsbRftSWF.jpg' ) ); ?>" alt="Deux étudiants pendant un jeu de langue avec des ballons" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Jeux</span></li>
-      <li class="tile" data-cat="debats"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DXmmpJqDJwf.jpg' ) ); ?>" alt="Un étudiant prend la parole autour de la table" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Débats</span></li>
+      <li class="tile tile--big" data-cat="conversations"><div class="photo-row photo-row--2"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/hl-classe.jpg' ) ); ?>" alt="Des étudiantes échangent autour de la grande table du TalkLab" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/Dd8u3z4N--g.jpg' ) ); ?>" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"></div><span class="chip">Conversations</span></li>
+      <li class="tile" data-cat="jeux"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/talklab-uno.jpg' ) ); ?>" alt="Une partie de UNO au TalkLab" width="787" height="1400" loading="lazy" decoding="async"><span class="chip">Jeux</span></li>
+      <li class="tile tile--tall" data-cat="debats"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/classe-table-discussion.jpg' ) ); ?>" alt="Un professeur anime un échange avec un groupe d’étudiants autour de la table" width="1290" height="847" loading="lazy" decoding="async"><span class="chip">Débats</span></li>
+      <li class="tile" data-cat="events"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/salle-evenements.jpg' ) ); ?>" alt="La salle préparée pour un événement, aux couleurs du Maroc" width="1050" height="1400" loading="lazy" decoding="async"><span class="chip">Événements</span></li>
+      <li class="tile tile--wide" data-cat="conversations"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/hl-talklab.jpg' ) ); ?>" alt="Un étudiant prend la parole pendant une séance du TalkLab" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Conversations</span></li>
+      <li class="tile" data-cat="jeux"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/talklab-cartes-mafia.jpg' ) ); ?>" alt="Les cartes du jeu Mafia, utilisées au TalkLab" width="1050" height="1400" loading="lazy" decoding="async"><span class="chip">Jeux</span></li>
+      <li class="tile" data-cat="debats"><img class="ph-img" style="object-position: 50% 8%" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/prof-paperboard.jpg' ) ); ?>" alt="Un professeur anime le cours devant le paperboard" width="1050" height="1400" loading="lazy" decoding="async"><span class="chip">Débats</span></li>
     </ul>
   </div>
 </section>

@@ -4,3 +4,8 @@ Thumbs.db
 desktop.ini
 .vscode/
 __pycache__/
+
+# Local build output / tooling
+dist/
+.wrangler/
+.claude/

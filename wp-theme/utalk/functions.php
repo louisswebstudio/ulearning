@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'UTALK_VERSION', '1.11.0' );
+define( 'UTALK_VERSION', '1.13.0' );
 
 require get_template_directory() . '/inc/pages.php';
 
@@ -262,7 +262,7 @@ function utalk_handle_contact() {
 
 	$body = "Nom : $name\nTéléphone : $phone\nEmail : $email\nLangue : $lang\nEnvoyé depuis : $back";
 
-	wp_insert_post(
+	$GLOBALS['utalk_last_message'] = wp_insert_post(
 		array(
 			'post_type'    => 'utalk_message',
 			'post_status'  => 'private',
@@ -270,6 +270,9 @@ function utalk_handle_contact() {
 			'post_content' => $body,
 		)
 	);
+
+	$message_id = utalk_last_message_id();
+	utalk_send_to_sheet( $message_id, array( 'nom' => $name, 'telephone' => $phone, 'email' => $email, 'langue' => $lang, 'page' => $back ) );
 
 	$to = apply_filters( 'utalk_contact_to', get_option( 'admin_email' ) );
 	wp_mail( $to, "[UTALK] Nouvelle demande : $name ($lang)", $body, array( "Reply-To: $name <$email>" ) );
@@ -287,3 +290,91 @@ add_filter( 'woocommerce_show_page_title', '__return_false' ); // woocommerce.ph
 function utalk_is_wide_page() {
 	return function_exists( 'is_cart' ) && ( is_cart() || is_checkout() || is_account_page() );
 }
+
+/* ---------------------------------------------------------------------------
+ * Google Sheets: each contact request also becomes a row in a Google Sheet
+ * (Apps Script web app: tools/google-sheets/Code.gs, setup: docs/GOOGLE_SHEETS.md)
+ * ------------------------------------------------------------------------ */
+function utalk_last_message_id() {
+	return isset( $GLOBALS['utalk_last_message'] ) && ! is_wp_error( $GLOBALS['utalk_last_message'] ) ? (int) $GLOBALS['utalk_last_message'] : 0;
+}
+
+function utalk_send_to_sheet( $message_id, $fields ) {
+	$url   = trim( (string) get_option( 'utalk_sheets_url' ) );
+	$token = (string) get_option( 'utalk_sheets_token' );
+	if ( '' === $url ) {
+		return;
+	}
+	$response = wp_remote_post(
+		$url,
+		array(
+			'timeout'     => 10,
+			'redirection' => 5,
+			'body'        => array_merge( array( 'token' => $token ), $fields ),
+		)
+	);
+	// Keep the outcome on the message, visible in Messages UTALK if a row is ever missing.
+	if ( $message_id ) {
+		$status = is_wp_error( $response )
+			? 'Erreur : ' . $response->get_error_message()
+			: ( false !== strpos( wp_remote_retrieve_body( $response ), '"ok":true' ) ? 'Envoyé' : 'Refusé (vérifier le jeton) : ' . wp_remote_retrieve_response_code( $response ) );
+		update_post_meta( $message_id, '_utalk_sheet_status', $status );
+	}
+}
+
+// Settings > UTALK Google Sheets
+add_action(
+	'admin_init',
+	function () {
+		register_setting( 'utalk_sheets', 'utalk_sheets_url', array( 'type' => 'string', 'sanitize_callback' => 'esc_url_raw' ) );
+		register_setting( 'utalk_sheets', 'utalk_sheets_token', array( 'type' => 'string', 'sanitize_callback' => 'sanitize_text_field' ) );
+	}
+);
+
+add_action(
+	'admin_menu',
+	function () {
+		add_options_page( 'UTALK Google Sheets', 'UTALK Google Sheets', 'manage_options', 'utalk-sheets', 'utalk_sheets_page' );
+	}
+);
+
+function utalk_sheets_page() {
+	?>
+	<div class="wrap">
+		<h1>UTALK Google Sheets</h1>
+		<p>Chaque demande envoyée avec le formulaire de contact est aussi ajoutée comme une ligne dans votre Google Sheet. Laissez l’URL vide pour désactiver.</p>
+		<form method="post" action="options.php">
+			<?php settings_fields( 'utalk_sheets' ); ?>
+			<table class="form-table" role="presentation">
+				<tr>
+					<th scope="row"><label for="utalk_sheets_url">URL de l’application web</label></th>
+					<td><input type="url" class="regular-text code" id="utalk_sheets_url" name="utalk_sheets_url" value="<?php echo esc_attr( get_option( 'utalk_sheets_url' ) ); ?>" placeholder="https://script.google.com/macros/s/…/exec"></td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="utalk_sheets_token">Jeton secret</label></th>
+					<td><input type="text" class="regular-text code" id="utalk_sheets_token" name="utalk_sheets_token" value="<?php echo esc_attr( get_option( 'utalk_sheets_token' ) ); ?>" autocomplete="off">
+					<p class="description">Le même texte que <code>TOKEN</code> dans le script Google.</p></td>
+				</tr>
+			</table>
+			<?php submit_button(); ?>
+		</form>
+	</div>
+	<?php
+}
+
+// Show the Google Sheets result on each message (Messages UTALK > open a message)
+add_action(
+	'add_meta_boxes_utalk_message',
+	function () {
+		add_meta_box(
+			'utalk_sheet_status',
+			'Google Sheets',
+			function ( $post ) {
+				$status = get_post_meta( $post->ID, '_utalk_sheet_status', true );
+				echo esc_html( $status ? $status : 'Non envoyé (Google Sheets pas encore configuré).' );
+			},
+			'utalk_message',
+			'side'
+		);
+	}
+);

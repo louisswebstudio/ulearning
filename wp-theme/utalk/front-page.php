@@ -14,34 +14,34 @@ get_header();
 
     <p class="hero__eyebrow reveal">UTALK CENTER · Casablanca</p>
     <h1 class="hero__title reveal">Learn. Speak.<br><span class="scribble">Connect.</span></h1>
-    <p class="hero__langs hero__sub reveal">Un centre de langues et de communication au cœur de Casablanca. Anglais, français, allemand, espagnol ou italien&nbsp;: en petit groupe ou en individuel, on vous fait parler dès le premier cours.</p>
+    <p class="hero__langs hero__sub reveal">Un centre de langues et de communication au cœur de Casablanca. Anglais, français, allemand, espagnol, italien, turc, russe, coréen ou chinois&nbsp;: en petit groupe ou en individuel, on vous fait parler dès le premier cours.</p>
     <div class="hero__actions reveal">
       <a href="#programmes" class="btn btn--primary">Découvrir nos formations</a>
       <a href="#contact" class="btn btn--outline">Contactez-nous</a>
     </div>
   </div>
 
-  <!-- 3D photo carousel: cards on the inside of a turning cylinder (CSS 3D, no script) -->
+  <!-- 3D photo carousel: cards on the inside of a turning cylinder (CSS 3D; main.js adds drag + momentum) -->
   <div class="ring" aria-hidden="true">
     <ul class="ring__track" style="--n:18">
-      <li class="ring__card" style="--i:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/hl-classe.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:1"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/DavO0NTNy_q.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:2"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/DdYjCJtNuX3.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:3"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/hl-etudiante.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:4"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/Dd8u3z4N--g.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:5"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/DXmmpJqDJwf.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:6"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/hl-talklab.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:7"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/DdrEsgFtw_t.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:8"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/DbDsbRftSWF.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:9"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/hl-adulte.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:10"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/DdTmEAyNO6t.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:11"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/Dd1DMVoNF_K.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:12"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/hl-salle.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:13"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/DdgZwF1tbxp.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:14"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/Ddln2h3tY5T.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:15"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/DVbeFAijA2A.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:16"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/hl-couloir.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
-      <li class="ring__card" style="--i:17"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/DYj_qf_scYO.jpg' ) ); ?>" alt="" width="580" height="1030" decoding="async"></li>
+      <li class="ring__card" style="--i:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/cours-en-classe.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:1"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/hl-classe.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:2"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/DdYjCJtNuX3.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:3"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/certificat-etudiante.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:4"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/Dd8u3z4N--g.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:5"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/prof-paperboard.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:6"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/talklab-cartes-mafia.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:7"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/hl-etudiante.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:8"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/quiz-ecran.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:9"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/hl-salle.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:10"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/jeux-de-societe.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:11"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/etudiante-accueil.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:12"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/hl-adulte.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:13"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/seance-grand-groupe.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:14"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/Dd1DMVoNF_K.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:15"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/coworking-vue-casablanca.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:16"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/DdrEsgFtw_t.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
+      <li class="ring__card" style="--i:17"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/carousel/certificat-etudiant-3.jpg' ) ); ?>" alt="" width="680" height="1207" decoding="async"></li>
     </ul>
   </div>
 </section>
@@ -51,7 +51,7 @@ get_header();
   <div class="container">
     <div class="sec-head">
       <h2 class="section-title">Nos <span class="scribble">langues</span></h2>
-      <p class="langs__intro">Choisissez une langue et découvrez nos niveaux, formats et horaires.</p>
+      <p>Choisissez une langue et découvrez nos niveaux, formats et horaires.</p>
     </div>
     <div class="langs__grid">
 
@@ -89,10 +89,10 @@ get_header();
       <p class="lang-card__meta">A1 → C1 · Groupes &amp; individuels</p>
       <span class="lang-card__arrow" aria-hidden="true"></span>
     </a>
-    <a href="<?php echo esc_url( utalk_url( 'contact' ) ); ?>" class="lang-card lang-card--more">
-      <span class="flag-stack" aria-hidden="true"><svg class="flag" viewBox="0 0 60 60" aria-hidden="true"><clipPath id="c-tr"><circle cx="30" cy="30" r="30"/></clipPath><g clip-path="url(#c-tr)"><rect width="60" height="60" fill="#E30A17"/><circle cx="25" cy="30" r="12" fill="#fff"/><circle cx="28" cy="30" r="9.6" fill="#E30A17"/><polygon points="33.5,30.0 37.5,28.5 37.6,24.3 40.3,27.6 44.4,26.5 42.0,30.0 44.4,33.5 40.3,32.4 37.6,35.7 37.5,31.5" fill="#fff"/></g></svg><svg class="flag" viewBox="0 0 60 60" aria-hidden="true"><clipPath id="c-cn"><circle cx="30" cy="30" r="30"/></clipPath><g clip-path="url(#c-cn)"><rect width="60" height="60" fill="#DE2910"/><polygon points="20.0,14.0 22.0,19.3 27.6,19.5 23.2,23.0 24.7,28.5 20.0,25.4 15.3,28.5 16.8,23.0 12.4,19.5 18.0,19.3" fill="#FFDE00"/><polygon points="32.3,10.7 32.0,12.6 33.5,13.5 31.7,13.8 31.3,15.6 30.5,13.9 28.6,14.1 29.9,12.8 29.3,11.1 30.9,11.9" fill="#FFDE00"/><polygon points="35.5,15.4 35.8,17.2 37.6,17.6 36.0,18.5 36.1,20.3 34.8,19.1 33.1,19.8 33.9,18.2 32.7,16.8 34.5,17.0" fill="#FFDE00"/><polygon points="34.5,22.4 35.5,24.0 37.3,23.8 36.1,25.2 36.9,26.8 35.2,26.1 33.9,27.3 34.0,25.5 32.4,24.6 34.2,24.2" fill="#FFDE00"/><polygon points="29.7,27.7 31.1,28.9 32.7,28.1 32.1,29.8 33.4,31.1 31.5,30.9 30.7,32.6 30.3,30.8 28.5,30.5 30.0,29.6" fill="#FFDE00"/></g></svg><svg class="flag" viewBox="0 0 60 60" aria-hidden="true"><clipPath id="c-kr"><circle cx="30" cy="30" r="30"/></clipPath><g clip-path="url(#c-kr)"><rect width="60" height="60" fill="#fff"/><g transform="rotate(34 30 30)"><path d="M18 30a12 12 0 0 1 24 0z" fill="#CD2E3A"/><path d="M18 30a12 12 0 0 0 24 0z" fill="#0047A0"/><circle cx="24" cy="30" r="6" fill="#CD2E3A"/><circle cx="36" cy="30" r="6" fill="#0047A0"/></g><g fill="#000"><rect x="7" y="13" width="9" height="2" transform="rotate(-56 11.5 14)"/><rect x="44" y="13" width="9" height="2" transform="rotate(56 48.5 14)"/><rect x="7" y="45" width="9" height="2" transform="rotate(56 11.5 46)"/><rect x="44" y="45" width="9" height="2" transform="rotate(-56 48.5 46)"/></g></g></svg><svg class="flag" viewBox="0 0 60 60" aria-hidden="true"><clipPath id="c-ru"><circle cx="30" cy="30" r="30"/></clipPath><g clip-path="url(#c-ru)"><rect width="60" height="20" fill="#fff"/><rect y="20" width="60" height="20" fill="#0039A6"/><rect y="40" width="60" height="20" fill="#D52B1E"/></g></svg><span class="flag-stack__more">+</span></span>
-      <p class="lang-card__name">Autres langues</p>
-      <p class="lang-card__meta">Turc · Chinois · Coréen · Russe · et plus</p>
+    <a href="<?php echo esc_url( utalk_url( 'langues' ) ); ?>" class="lang-card lang-card--more">
+      <span class="flag-stack" aria-hidden="true"><svg class="flag" viewBox="0 0 60 60" aria-hidden="true"><clipPath id="h-tr"><circle cx="30" cy="30" r="30"/></clipPath><g clip-path="url(#h-tr)"><rect width="60" height="60" fill="#E30A17"/><circle cx="25" cy="30" r="12" fill="#fff"/><circle cx="28" cy="30" r="9.6" fill="#E30A17"/><polygon points="33.5,30.0 37.5,28.5 37.6,24.3 40.3,27.6 44.4,26.5 42.0,30.0 44.4,33.5 40.3,32.4 37.6,35.7 37.5,31.5" fill="#fff"/></g></svg><svg class="flag" viewBox="0 0 60 60" aria-hidden="true"><clipPath id="h-ru"><circle cx="30" cy="30" r="30"/></clipPath><g clip-path="url(#h-ru)"><rect width="60" height="20" fill="#fff"/><rect y="20" width="60" height="20" fill="#0039A6"/><rect y="40" width="60" height="20" fill="#D52B1E"/></g></svg><svg class="flag" viewBox="0 0 60 60" aria-hidden="true"><clipPath id="h-kr"><circle cx="30" cy="30" r="30"/></clipPath><g clip-path="url(#h-kr)"><rect width="60" height="60" fill="#fff"/><g transform="rotate(34 30 30)"><path d="M18 30a12 12 0 0 1 24 0z" fill="#CD2E3A"/><path d="M18 30a12 12 0 0 0 24 0z" fill="#0047A0"/><circle cx="24" cy="30" r="6" fill="#CD2E3A"/><circle cx="36" cy="30" r="6" fill="#0047A0"/></g><g fill="#000"><rect x="7" y="13" width="9" height="2" transform="rotate(-56 11.5 14)"/><rect x="44" y="13" width="9" height="2" transform="rotate(56 48.5 14)"/><rect x="7" y="45" width="9" height="2" transform="rotate(56 11.5 46)"/><rect x="44" y="45" width="9" height="2" transform="rotate(-56 48.5 46)"/></g></g></svg><svg class="flag" viewBox="0 0 60 60" aria-hidden="true"><clipPath id="h-cn"><circle cx="30" cy="30" r="30"/></clipPath><g clip-path="url(#h-cn)"><rect width="60" height="60" fill="#DE2910"/><polygon points="20.0,14.0 22.0,19.3 27.6,19.5 23.2,23.0 24.7,28.5 20.0,25.4 15.3,28.5 16.8,23.0 12.4,19.5 18.0,19.3" fill="#FFDE00"/><polygon points="32.3,10.7 32.0,12.6 33.5,13.5 31.7,13.8 31.3,15.6 30.5,13.9 28.6,14.1 29.9,12.8 29.3,11.1 30.9,11.9" fill="#FFDE00"/><polygon points="35.5,15.4 35.8,17.2 37.6,17.6 36.0,18.5 36.1,20.3 34.8,19.1 33.1,19.8 33.9,18.2 32.7,16.8 34.5,17.0" fill="#FFDE00"/><polygon points="34.5,22.4 35.5,24.0 37.3,23.8 36.1,25.2 36.9,26.8 35.2,26.1 33.9,27.3 34.0,25.5 32.4,24.6 34.2,24.2" fill="#FFDE00"/><polygon points="29.7,27.7 31.1,28.9 32.7,28.1 32.1,29.8 33.4,31.1 31.5,30.9 30.7,32.6 30.3,30.8 28.5,30.5 30.0,29.6" fill="#FFDE00"/></g></svg></span>
+      <p class="lang-card__name">Plus de langues</p>
+      <p class="lang-card__meta"><span lang="tr">Türkçe</span> · <span lang="ru">Русский</span> · <span lang="ko">한국어</span> · <span lang="zh">中文</span></p>
       <span class="lang-card__arrow" aria-hidden="true"></span>
     </a>
     </div>
@@ -103,16 +103,13 @@ get_header();
 <section class="method" id="methode">
   <div class="container">
     <div class="sec-head">
-      <h2 class="method__title">
-        Notre
-        <span class="scribble">méthode</span>
-      </h2>
-      <p class="method__lead">Quatre étapes pour passer des cours à la vraie conversation.</p>
+      <h2 class="section-title">Notre <span class="scribble">méthode</span></h2>
+      <p>Quatre étapes pour passer des cours à la vraie conversation.</p>
     </div>
     <div class="method__grid">
     <div class="method__intro">
       <figure class="method__photo">
-        <img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DbDsbRftSWF.jpg' ) ); ?>" alt="Deux étudiants pendant un jeu de langue avec des ballons" width="800" height="1420" loading="lazy" decoding="async">
+        <img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/classe-table-discussion.jpg' ) ); ?>" alt="Un professeur anime un échange avec un groupe d’étudiants autour de la table" width="1290" height="847" loading="lazy" decoding="async">
       </figure>
     </div>
 
@@ -153,7 +150,7 @@ get_header();
 <!-- ============ L'EXPÉRIENCE UTALK (ref: Kidora "Discover our learning space" + marquee; gallery with filters added) ============ -->
 <section class="xp" id="experience">
   <div class="xp__banner">
-    <div class="xp__media photo-row photo-row--4"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DdYjCJtNuX3.jpg' ) ); ?>" alt="L’accueil d’UTALK Center, avec le logo et les drapeaux des cinq langues" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DavO0NTNy_q.jpg' ) ); ?>" alt="Des étudiantes rient pendant une activité devant l’écran interactif" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/Dd8u3z4N--g.jpg' ) ); ?>" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DXmmpJqDJwf.jpg' ) ); ?>" alt="Un étudiant prend la parole autour de la table" width="800" height="1420" loading="lazy" decoding="async"></div>
+    <div class="xp__media photo-row photo-row--4"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DdYjCJtNuX3.jpg' ) ); ?>" alt="L’accueil d’UTALK Center, avec le logo et les drapeaux des cinq langues" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DavO0NTNy_q.jpg' ) ); ?>" alt="Des étudiantes rient pendant une activité devant l’écran interactif" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/Dd8u3z4N--g.jpg' ) ); ?>" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/hl-talklab.jpg' ) ); ?>" alt="Un étudiant prend la parole pendant une séance du TalkLab" width="800" height="1420" loading="lazy" decoding="async"></div>
     <div class="xp__overlay"></div>
     <div class="container xp__banner-inner">
       <p class="eyebrow eyebrow--light">✦ L’expérience UTALK</p>
@@ -173,29 +170,30 @@ get_header();
   </div>
 
   <div class="container xp__gallery">
-    <div class="xp__head">
-      <h3 class="xp__subtitle">Nos moments en images</h3>
-      <a href="<?php echo esc_url( utalk_url( 'experience' ) ); ?>" class="btn-pill">Voir toute l’expérience <span class="btn-pill__icon" aria-hidden="true"></span></a>
+    <div class="sec-head">
+      <h2 class="section-title">Nos moments <span class="scribble">en images</span></h2>
+      <p>Cours, TalkLab, activités : un aperçu de la vie au centre.</p>
     </div>
 
     <ul class="tiles">
-      <li class="tile tile--big" data-cat="classrooms"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DavO0NTNy_q.jpg' ) ); ?>" alt="Des étudiantes rient pendant une activité devant l’écran interactif" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Classrooms</span></li>
-      <li class="tile tile--tall" data-cat="communication"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DXmmpJqDJwf.jpg' ) ); ?>" alt="Un étudiant prend la parole autour de la table" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Communication</span></li>
-      <li class="tile" data-cat="talklab"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/Dd8u3z4N--g.jpg' ) ); ?>" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">TalkLab</span></li>
-      <li class="tile" data-cat="activities"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DbDsbRftSWF.jpg' ) ); ?>" alt="Deux étudiants pendant un jeu de langue avec des ballons" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Activities</span></li>
+      <li class="tile tile--big" data-cat="classrooms"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/quiz-ecran.jpg' ) ); ?>" alt="Les étudiants répondent à un quiz sur l’écran interactif" width="1062" height="1400" loading="lazy" decoding="async"><span class="chip">Classrooms</span></li>
+      <li class="tile tile--tall" data-cat="communication"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/hl-etudiante.jpg' ) ); ?>" alt="Une étudiante prend la parole en cours" width="800" height="1420" loading="lazy" decoding="async"><span class="chip">Communication</span></li>
+      <li class="tile" data-cat="talklab"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/talklab-cartes-mafia.jpg' ) ); ?>" alt="Les cartes du jeu Mafia, utilisées au TalkLab" width="1050" height="1400" loading="lazy" decoding="async"><span class="chip">TalkLab</span></li>
+      <li class="tile" data-cat="activities"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/jeux-de-societe.jpg' ) ); ?>" alt="Des étudiants réunis autour des jeux de société du centre" width="796" height="1400" loading="lazy" decoding="async"><span class="chip">Activities</span></li>
     </ul>
+
+    <div class="sec-foot">
+      <a href="<?php echo esc_url( utalk_url( 'experience' ) ); ?>" class="btn-pill">Voir toute l’expérience <span class="btn-pill__icon" aria-hidden="true"></span></a>
+    </div>
   </div>
 </section>
 
 <!-- ============ NOS PROGRAMMES (ref: Kidora "Programs for growing minds", stacked cards) ============ -->
 <section class="progs" id="programmes">
   <div class="container">
-    <div class="progs__head">
-      <div>
-        <p class="label">Nos programmes</p>
-        <h2 class="progs__title">Des programmes pour <span class="scribble">parler</span></h2>
-      </div>
-      <a href="<?php echo esc_url( utalk_url( 'programmes' ) ); ?>" class="btn-pill">Voir tous les programmes <span class="btn-pill__icon" aria-hidden="true"></span></a>
+    <div class="sec-head">
+      <h2 class="section-title">Des programmes pour <span class="scribble">parler</span></h2>
+      <p>Cours en groupe, ateliers d’expression orale, formules intensives ou individuelles.</p>
     </div>
 
     <ol class="progs__list">
@@ -205,11 +203,11 @@ get_header();
           <div class="prog__content">
             <span class="prog__num">01</span>
             <h3 class="prog__name">Cours de langues</h3>
-            <p class="prog__text">Des cours en groupe pour apprendre l’anglais, le français, l’allemand, l’espagnol ou l’italien, du niveau débutant au niveau avancé.</p>
+            <p class="prog__text">Des cours en groupe pour apprendre l’anglais, le français, l’allemand, l’espagnol, l’italien, le turc, le russe, le coréen ou le chinois, du niveau débutant au niveau avancé.</p>
             <span class="prog__tag">Tous niveaux · A1 → C1</span>
             <span class="prog__more">Voir détails <span aria-hidden="true">→</span></span>
           </div>
-          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/stock/cours-de-langues.jpg' ) ); ?>" alt="Des étudiants souriants échangent pendant un cours" width="1400" height="788" loading="lazy" decoding="async"></div>
+          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/cours-en-classe.jpg' ) ); ?>" alt="Des étudiantes suivent un cours en petit groupe avec leur professeur" width="1057" height="1400" loading="lazy" decoding="async"></div>
         </a>
       </li>
       <li class="prog prog--2">
@@ -222,7 +220,7 @@ get_header();
             <span class="prog__tag">Expression orale</span>
             <span class="prog__more">Voir détails <span aria-hidden="true">→</span></span>
           </div>
-          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/stock/communication-speaking.jpg' ) ); ?>" alt="Une femme prend la parole au micro devant un groupe" width="1400" height="931" loading="lazy" decoding="async"></div>
+          <div class="prog__photo"><img class="ph-img" style="object-position: 50% 8%" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/prof-paperboard.jpg' ) ); ?>" alt="Un professeur anime le cours devant le paperboard" width="1050" height="1400" loading="lazy" decoding="async"></div>
         </a>
       </li>
       <li class="prog prog--3">
@@ -235,7 +233,7 @@ get_header();
             <span class="prog__tag">Progression rapide</span>
             <span class="prog__more">Voir détails <span aria-hidden="true">→</span></span>
           </div>
-          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/stock/cours-intensifs.jpg' ) ); ?>" alt="Un groupe d’étudiants travaille ensemble autour d’un ordinateur" width="1400" height="788" loading="lazy" decoding="async"></div>
+          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/seance-grand-groupe.jpg' ) ); ?>" alt="Une séance en grand groupe dans l’espace culturel du centre" width="1050" height="1400" loading="lazy" decoding="async"></div>
         </a>
       </li>
       <li class="prog prog--4">
@@ -248,10 +246,14 @@ get_header();
             <span class="prog__tag">One to One · Sur mesure</span>
             <span class="prog__more">Voir détails <span aria-hidden="true">→</span></span>
           </div>
-          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/stock/cours-individuels.jpg' ) ); ?>" alt="Une professeure et une élève travaillent sur le même cahier" width="1400" height="933" loading="lazy" decoding="async"></div>
+          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/prof-bureau-anglais.jpg' ) ); ?>" alt="Un professeur d’anglais à son bureau, à côté du drapeau américain" width="1050" height="1400" loading="lazy" decoding="async"></div>
         </a>
       </li>
     </ol>
+
+    <div class="sec-foot">
+      <a href="<?php echo esc_url( utalk_url( 'programmes' ) ); ?>" class="btn-pill">Voir tous les programmes <span class="btn-pill__icon" aria-hidden="true"></span></a>
+    </div>
   </div>
 </section>
 
@@ -259,12 +261,12 @@ get_header();
 <section class="tl" id="talklab">
   <div class="container">
     <div class="sec-head">
-      <p class="label">TalkLab</p>
-      <h2 class="tl__title">Learn the language. <span class="scribble">Live</span> the language.</h2>
+      <h2 class="section-title">Learn the language. <span class="scribble">Live</span> the language.</h2>
+      <p>Des conversations, des jeux et des débats pour pratiquer pour de vrai.</p>
     </div>
     <div class="tl__grid">
     <figure class="tl__photo">
-      <img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/Dd8u3z4N--g.jpg' ) ); ?>" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async">
+      <img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/conversation-talklab.jpg' ) ); ?>" alt="Deux étudiants discutent autour de la table du TalkLab" width="1050" height="1400" loading="lazy" decoding="async">
     </figure>
 
     <div class="tl__body">
@@ -284,9 +286,11 @@ get_header();
           <p>Jeux de rôle, quiz et défis pour utiliser la langue en s’amusant.</p>
         </div>
       </div>
-
-      <a href="<?php echo esc_url( utalk_url( 'talklab' ) ); ?>" class="btn-pill">Découvrir le TalkLab <span class="btn-pill__icon" aria-hidden="true"></span></a>
     </div>
+    </div>
+
+    <div class="sec-foot">
+      <a href="<?php echo esc_url( utalk_url( 'talklab' ) ); ?>" class="btn-pill">Découvrir le TalkLab <span class="btn-pill__icon" aria-hidden="true"></span></a>
     </div>
   </div>
 </section>
@@ -308,6 +312,7 @@ get_header();
       <li><a class="avis-card" href="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-soufiane.jpg' ) ); ?>" target="_blank" rel="noopener"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-soufiane.jpg' ) ); ?>" alt="Carte d’avis UTALK de Soufiane, 5 étoiles sur 5 : « Un accueil excellent, et la façon de transmettre l’information comme les cours sont excellents. Je souhaite beaucoup de réussite au centre. »" width="800" height="1422" loading="lazy" decoding="async"></a></li>
       <li><a class="avis-card" href="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-google-2.jpg' ) ); ?>" target="_blank" rel="noopener"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-google-2.jpg' ) ); ?>" alt="Capture d’avis Google 5 étoiles sur UTALK Center : Zineb Ait Ameur, Souhail Nahed et Brahim Boutaouf recommandent le centre." width="800" height="1422" loading="lazy" decoding="async"></a></li>
       <li><a class="avis-card" href="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-karima.jpg' ) ); ?>" target="_blank" rel="noopener"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-karima.jpg' ) ); ?>" alt="Carte d’avis UTALK de Karima, 4,5 étoiles sur 5 : « Me gusta mucho ! 😍 »" width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li><a class="avis-card" href="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-khadija.jpg' ) ); ?>" target="_blank" rel="noopener"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-khadija.jpg' ) ); ?>" alt="Carte d’avis UTALK de Khadija, 4 étoiles sur 5 : « Nous aimerions que vous ajoutiez quelques séances de révision pour certains cours que nous manquons. Merci. »" width="800" height="1422" loading="lazy" decoding="async"></a></li>
       <li aria-hidden="true"><a class="avis-card" href="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-hamza.jpg' ) ); ?>" target="_blank" rel="noopener" tabindex="-1"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-hamza.jpg' ) ); ?>" alt="" width="800" height="1422" loading="lazy" decoding="async"></a></li>
       <li aria-hidden="true"><a class="avis-card" href="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-ilham.jpg' ) ); ?>" target="_blank" rel="noopener" tabindex="-1"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-ilham.jpg' ) ); ?>" alt="" width="800" height="1422" loading="lazy" decoding="async"></a></li>
       <li aria-hidden="true"><a class="avis-card" href="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-google-1.jpg' ) ); ?>" target="_blank" rel="noopener" tabindex="-1"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-google-1.jpg' ) ); ?>" alt="" width="800" height="1422" loading="lazy" decoding="async"></a></li>
@@ -315,6 +320,7 @@ get_header();
       <li aria-hidden="true"><a class="avis-card" href="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-soufiane.jpg' ) ); ?>" target="_blank" rel="noopener" tabindex="-1"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-soufiane.jpg' ) ); ?>" alt="" width="800" height="1422" loading="lazy" decoding="async"></a></li>
       <li aria-hidden="true"><a class="avis-card" href="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-google-2.jpg' ) ); ?>" target="_blank" rel="noopener" tabindex="-1"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-google-2.jpg' ) ); ?>" alt="" width="800" height="1422" loading="lazy" decoding="async"></a></li>
       <li aria-hidden="true"><a class="avis-card" href="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-karima.jpg' ) ); ?>" target="_blank" rel="noopener" tabindex="-1"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-karima.jpg' ) ); ?>" alt="" width="800" height="1422" loading="lazy" decoding="async"></a></li>
+      <li aria-hidden="true"><a class="avis-card" href="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-khadija.jpg' ) ); ?>" target="_blank" rel="noopener" tabindex="-1"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/avis/avis-khadija.jpg' ) ); ?>" alt="" width="800" height="1422" loading="lazy" decoding="async"></a></li>
     </ul>
   </div>
 </section>
@@ -324,7 +330,8 @@ get_header();
 <section class="about" id="centre">
   <div class="container">
     <div class="sec-head">
-      <h2 class="about__title">Bienvenue chez <span class="scribble">UTALK Center</span></h2>
+      <h2 class="section-title">Bienvenue chez <span class="scribble">UTALK Center</span></h2>
+      <p>Un centre de langues et de communication au cœur de Casablanca.</p>
     </div>
     <div class="about__grid">
     <figure class="about__photo">
@@ -336,7 +343,7 @@ get_header();
     </figure>
 
     <div class="about__body">
-      <p class="about__lead">UTALK est un centre de formation en langues et en communication. On y apprend l’anglais, le français, l’allemand, l’espagnol et l’italien, avec une priorité : vous faire parler.</p>
+      <p class="about__lead">UTALK est un centre de formation en langues et en communication. On y apprend l’anglais, le français, l’allemand, l’espagnol, l’italien, le turc, le russe, le coréen et le chinois, avec une priorité : vous faire parler.</p>
       <div class="about__facts">
         <div class="about__fact">
           <span class="ico ico--mic" aria-hidden="true"></span>
@@ -359,8 +366,11 @@ get_header();
           <p>Un espace de travail partagé, au même étage que les salles de cours.</p>
         </div>
       </div>
-      <a href="#contact" class="btn btn--primary">Nous rendre visite</a>
     </div>
+    </div>
+
+    <div class="sec-foot">
+      <a href="#contact" class="btn-pill">Nous rendre visite <span class="btn-pill__icon" aria-hidden="true"></span></a>
     </div>
   </div>
 </section>
@@ -394,6 +404,10 @@ get_header();
             <option>Deutsch</option>
             <option>Español</option>
             <option>Italiano</option>
+            <option lang="tr">Türkçe</option>
+            <option lang="ru">Русский</option>
+            <option lang="ko">한국어</option>
+            <option lang="zh">中文</option>
           </select>
         </div>
       </div>
@@ -409,8 +423,8 @@ get_header();
 
     <div class="visit">
       <h2 class="visit__title">UTALK Center <span class="accent">Casablanca</span></h2>
-      <figure class="visit__photo">
-        <img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DVbeFAijA2A.jpg' ) ); ?>" alt="Le hall d’UTALK Center, avec les kakémonos UTALK" width="800" height="1420" loading="lazy" decoding="async">
+      <figure class="visit__photo visit__photo--map">
+        <iframe title="Carte Google Maps : UTALK Center, Avenue des FAR, Immeuble 44, Casablanca" src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!3m2!1m1!4s12848810503530612854" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <figcaption class="visit__pill">
           <span>Centre-ville · Avenue des FAR, Immeuble 44 · 12<sup>e</sup> étage</span>
           <span class="visit__pin" aria-hidden="true"></span>

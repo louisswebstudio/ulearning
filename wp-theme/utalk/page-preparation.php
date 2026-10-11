@@ -21,7 +21,7 @@ get_header();
 <section class="course">
   <div class="container course__grid">
     <div class="course__main">
-      <figure class="course__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/stock/preparation.jpg' ) ); ?>" alt="Une jeune femme souriante sur un toit de Paris, la tour Eiffel au loin" width="1400" height="933" loading="lazy" decoding="async"></figure>
+      <figure class="course__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/certificats.jpg' ) ); ?>" alt="Des certificats UTALK prêts à être remis aux étudiants" width="1050" height="1400" loading="lazy" decoding="async"></figure>
 
       <h2 class="course__h">À propos du cours</h2>
       <p class="course__p">Vous visez le TCF ou le DELF&nbsp;? On vous prépare aux épreuves pas à pas&nbsp;: comprendre le format, travailler chaque compétence et vous entraîner sur des sujets type, avec l’oral au centre comme dans tous nos cours.</p>

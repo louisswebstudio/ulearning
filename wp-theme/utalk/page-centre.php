@@ -13,7 +13,7 @@ get_header();
   <div class="container">
     <h1 class="about-hero__title">À propos d’<span class="scribble">UTALK</span></h1>
     <p class="about-hero__lead">Un centre de langues et de communication au cœur de Casablanca, où l’on apprend en parlant.</p>
-    <figure class="about-hero__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DdYjCJtNuX3.jpg' ) ); ?>" alt="L’accueil d’UTALK Center, avec le logo et les drapeaux des cinq langues" width="800" height="1420" loading="lazy" decoding="async"></figure>
+    <figure class="about-hero__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/groupe-utalk.jpg' ) ); ?>" alt="Étudiants et équipe UTALK réunis au centre" width="1400" height="1050" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -21,20 +21,24 @@ get_header();
 <section class="journey">
   <div class="container">
     <div class="sec-head">
-      <h2 class="journey__title"><span class="scribble">Qui</span> sommes-nous ?</h2>
+      <h2 class="section-title"><span class="scribble">Qui</span> sommes-nous ?</h2>
+      <p>Un centre de langues et de communication au cœur de Casablanca.</p>
     </div>
     <div class="journey__grid">
     <div class="journey__body">
-      <p class="journey__lead">UTALK Center est un centre de formation en langues et en communication, installé au centre-ville de Casablanca. On y apprend l’anglais, le français, l’allemand, l’espagnol et l’italien.</p>
+      <p class="journey__lead">UTALK Center est un centre de formation en langues et en communication, installé au centre-ville de Casablanca. On y apprend l’anglais, le français, l’allemand, l’espagnol, l’italien, le turc, le russe, le coréen et le chinois.</p>
       <ul class="checklist">
           <li><span class="check" aria-hidden="true"></span><span>+5 langues, du niveau A1 au niveau C1</span></li>
           <li><span class="check" aria-hidden="true"></span><span>Cours en groupe et cours individuels</span></li>
           <li><span class="check" aria-hidden="true"></span><span>Le TalkLab pour pratiquer l’oral</span></li>
           <li><span class="check" aria-hidden="true"></span><span>Au 12<sup>e</sup> étage de l’Immeuble 44, avenue des FAR</span></li>
       </ul>
-      <a href="<?php echo esc_url( utalk_url( '', '#programmes' ) ); ?>" class="btn btn--primary">Nos programmes</a>
     </div>
-    <figure class="journey__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DavO0NTNy_q.jpg' ) ); ?>" alt="Des étudiantes rient pendant une activité devant l’écran interactif" width="800" height="1420" loading="lazy" decoding="async"></figure>
+    <figure class="journey__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/prof-bureau-anglais.jpg' ) ); ?>" alt="Un professeur d’anglais à son bureau, à côté du drapeau américain" width="1050" height="1400" loading="lazy" decoding="async"></figure>
+    </div>
+
+    <div class="sec-foot">
+      <a href="<?php echo esc_url( utalk_url( 'programmes' ) ); ?>" class="btn-pill">Nos programmes <span class="btn-pill__icon" aria-hidden="true"></span></a>
     </div>
   </div>
 </section>
@@ -42,7 +46,10 @@ get_header();
 <!-- ============ 3. NOTRE PHILOSOPHIE (ref: BrightMind "Our Core Values" 4 pastel cards) ============ -->
 <section class="core-values">
   <div class="container">
-    <h2 class="section-title core-values__title">Notre <span class="scribble">philosophie</span></h2>
+    <div class="sec-head">
+      <h2 class="section-title">Notre <span class="scribble">philosophie</span></h2>
+      <p>Ce qui guide chaque cours, chaque atelier et chaque séance au TalkLab.</p>
+    </div>
     <div class="core-values__grid">
       <div class="value-card value-card--en">
         <span class="value-card__ico"><span class="side-ico side-ico--chat"></span></span>
@@ -71,14 +78,17 @@ get_header();
 <!-- ============ 4. LE CENTRE EN IMAGES (home gallery grid) ============ -->
 <section class="xp">
   <div class="container xp__gallery">
-    <div class="xp__head"><h2 class="xp__subtitle">Le centre en <span class="scribble">images</span></h2></div>
+    <div class="sec-head">
+      <h2 class="section-title">Le centre en <span class="scribble">images</span></h2>
+      <p>Salles de cours, TalkLab, espace détente et vue du 12<sup>e</sup> étage.</p>
+    </div>
     <ul class="tiles">
       <li class="tile tile--big"><div class="photo-row photo-row--2"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DdYjCJtNuX3.jpg' ) ); ?>" alt="L’accueil d’UTALK Center, avec le logo et les drapeaux des cinq langues" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DdgZwF1tbxp.jpg' ) ); ?>" alt="L’accueil et le logo lumineux UTALK" width="800" height="1420" loading="lazy" decoding="async"></div></li>
-      <li class="tile"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/hl-salle.jpg' ) ); ?>" alt="Des étudiants dans une salle de cours lumineuse" width="800" height="1420" loading="lazy" decoding="async"></li>
+      <li class="tile"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/cours-en-classe.jpg' ) ); ?>" alt="Des étudiantes suivent un cours en petit groupe avec leur professeur" width="1057" height="1400" loading="lazy" decoding="async"></li>
       <li class="tile tile--tall"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/Dd8u3z4N--g.jpg' ) ); ?>" alt="Des étudiants jouent à des jeux de société dans le centre" width="800" height="1420" loading="lazy" decoding="async"></li>
-      <li class="tile"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/hl-couloir.jpg' ) ); ?>" alt="Le couloir du centre, décoré aux couleurs d’UTALK" width="800" height="1420" loading="lazy" decoding="async"></li>
-      <li class="tile tile--wide"><div class="photo-row photo-row--2"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/hl-vue-12e.jpg' ) ); ?>" alt="Vue sur le centre-ville de Casablanca depuis le 12e étage" width="800" height="1420" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/hl-couloir.jpg' ) ); ?>" alt="Le couloir du centre, décoré aux couleurs d’UTALK" width="800" height="1420" loading="lazy" decoding="async"></div></li>
-      <li class="tile"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DavO0NTNy_q.jpg' ) ); ?>" alt="Des étudiantes rient pendant une activité devant l’écran interactif" width="800" height="1420" loading="lazy" decoding="async"></li>
+      <li class="tile"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/salle-evenements.jpg' ) ); ?>" alt="La salle préparée pour un événement, aux couleurs du Maroc" width="1050" height="1400" loading="lazy" decoding="async"></li>
+      <li class="tile tile--wide"><div class="photo-row photo-row--2"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/coworking-vue-casablanca.jpg' ) ); ?>" alt="Une étudiante travaille face à la vue sur Casablanca, au 12e étage" width="1050" height="1400" loading="lazy" decoding="async"><img class="photo-row__img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/hl-couloir.jpg' ) ); ?>" alt="Le couloir du centre, décoré aux couleurs d’UTALK" width="800" height="1420" loading="lazy" decoding="async"></div></li>
+      <li class="tile"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/jeux-de-societe.jpg' ) ); ?>" alt="Des étudiants réunis autour des jeux de société du centre" width="796" height="1400" loading="lazy" decoding="async"></li>
       <li class="tile"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DdrEsgFtw_t.jpg' ) ); ?>" alt="Une conseillère UTALK reçoit un futur étudiant" width="800" height="1420" loading="lazy" decoding="async"></li>
     </ul>
   </div>

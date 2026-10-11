@@ -22,7 +22,7 @@ SRC = ROOT / "tools" / "wp-src"
 OUT = ROOT / "wp-theme" / "utalk"
 ZIP = ROOT / "dist" / "utalk-theme.zip"
 
-VERSION = "1.11.0"
+VERSION = "1.13.0"
 
 # static page -> (page path in WordPress, template file). Order = creation order (parents first).
 PAGES = [
@@ -33,6 +33,10 @@ PAGES = [
     ("langues/deutsch.html", "langues/deutsch", None),
     ("langues/espanol.html", "langues/espanol", None),
     ("langues/italiano.html", "langues/italiano", None),
+    ("langues/turc.html", "langues/turc", None),
+    ("langues/russe.html", "langues/russe", None),
+    ("langues/coreen.html", "langues/coreen", None),
+    ("langues/chinois.html", "langues/chinois", None),
     ("programmes.html", "programmes", None),
     ("programmes/cours-de-langues.html", "programmes/cours-de-langues", None),
     ("programmes/communication-speaking.html", "programmes/communication-speaking", None),
@@ -76,7 +80,7 @@ def rewrite_links(html, page_rel, keep_hash=True):
             return f'{attr}="{php_url(HTML_TO_PATH[target], frag)}"'
         raise SystemExit(f"{page_rel}: unknown link target {val!r}")
 
-    return re.sub(r'\b(href|src)="([^"]*)"', repl, html)
+    return re.sub(r'\b(href|src|poster)="([^"]*)"', repl, html)
 
 
 def contact_form(html):

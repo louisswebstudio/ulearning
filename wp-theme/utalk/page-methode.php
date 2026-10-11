@@ -18,19 +18,12 @@ get_header();
 </section>
 
 <!-- ============ 4 STEPS OVERVIEW (ref: Brightpath "How it works", from the home page) ============ -->
-<section class="method" id="methode">
+<section class="method" id="methode" aria-label="Les 4 étapes de la méthode">
   <div class="container">
-    <div class="sec-head">
-      <h2 class="method__title">
-        Les 4
-        <span class="scribble">méthode</span>
-      </h2>
-      <p class="method__lead">Quatre étapes pour passer des cours à la vraie conversation.</p>
-    </div>
     <div class="method__grid">
     <div class="method__intro">
       <figure class="method__photo">
-        <img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DbDsbRftSWF.jpg' ) ); ?>" alt="Deux étudiants pendant un jeu de langue avec des ballons" width="800" height="1420" loading="lazy" decoding="async">
+        <img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/classe-table-discussion.jpg' ) ); ?>" alt="Un professeur anime un échange avec un groupe d’étudiants autour de la table" width="1290" height="847" loading="lazy" decoding="async">
       </figure>
     </div>
 
@@ -71,11 +64,9 @@ get_header();
 <!-- ============ STEPS IN DETAIL (ref: Kidora stacked program cards) ============ -->
 <section class="progs">
   <div class="container">
-    <div class="progs__head">
-      <div>
-        <p class="label">Étape par étape</p>
-        <h2 class="progs__title">Chaque étape, en <span class="scribble">détail</span></h2>
-      </div>
+    <div class="sec-head">
+      <h2 class="section-title">Chaque étape, en <span class="scribble">détail</span></h2>
+      <p>Ce qui se passe à chaque étape, de la classe à la conversation.</p>
     </div>
     <ol class="progs__list">
       <li class="prog prog--1">
@@ -92,7 +83,7 @@ get_header();
       </ul>
             <span class="prog__tag">En classe</span>
           </div>
-          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DavO0NTNy_q.jpg' ) ); ?>" alt="Des étudiantes rient pendant une activité devant l’écran interactif" width="800" height="1420" loading="lazy" decoding="async"></div>
+          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/cours-en-classe.jpg' ) ); ?>" alt="Des étudiantes suivent un cours en petit groupe avec leur professeur" width="1057" height="1400" loading="lazy" decoding="async"></div>
         </div>
       </li>
       <li class="prog prog--2">
@@ -109,7 +100,7 @@ get_header();
       </ul>
             <span class="prog__tag">Mises en situation</span>
           </div>
-          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/Dd1DMVoNF_K.jpg' ) ); ?>" alt="Une étudiante en jeu de rôle, assise à un bureau" width="800" height="1420" loading="lazy" decoding="async"></div>
+          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/quiz-ecran.jpg' ) ); ?>" alt="Les étudiants répondent à un quiz sur l’écran interactif" width="1062" height="1400" loading="lazy" decoding="async"></div>
         </div>
       </li>
       <li class="prog prog--3">
@@ -127,7 +118,7 @@ get_header();
             <span class="prog__tag">TalkLab</span>
             <a href="<?php echo esc_url( utalk_url( 'talklab' ) ); ?>" class="prog__more">Découvrir le TalkLab <span aria-hidden="true">→</span></a>
           </div>
-          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/hl-talklab.jpg' ) ); ?>" alt="Un étudiant à la table du TalkLab, devant l’écran interactif" width="800" height="1420" loading="lazy" decoding="async"></div>
+          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/hl-classe.jpg' ) ); ?>" alt="Des étudiantes échangent autour de la grande table du TalkLab" width="800" height="1420" loading="lazy" decoding="async"></div>
         </div>
       </li>
       <li class="prog prog--4">
@@ -144,7 +135,7 @@ get_header();
       </ul>
             <span class="prog__tag">Suivi mensuel</span>
           </div>
-          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/instagram/DdrEsgFtw_t.jpg' ) ); ?>" alt="Une conseillère UTALK reçoit un futur étudiant" width="800" height="1420" loading="lazy" decoding="async"></div>
+          <div class="prog__photo"><img class="ph-img" src="<?php echo esc_url( get_theme_file_uri( 'assets/img/photos/certificat-etudiante.jpg' ) ); ?>" alt="Une étudiante pose avec son certificat UTALK" width="1059" height="1400" loading="lazy" decoding="async"></div>
         </div>
       </li>
     </ol>
@@ -154,15 +145,10 @@ get_header();
 <!-- ============ ÉTUDIANTS (ref: Kidora photo + quote cards, from the home page) ============ -->
 <!-- ============ ÉTUDIANTS (ref: Kidora "Stories from happy parents" photo + quote cards) ============ -->
 <section class="stu" id="etudiants">
-  <div class="container stu__head">
-    <div>
-      <p class="label">Étudiants</p>
-      <h2 class="stu__title">They learned. They practiced. They started <span class="scribble">speaking.</span></h2>
-    </div>
-    <div class="stu__nav">
-      <button type="button" class="round-btn" id="stu-prev" aria-label="Témoignage précédent"><span class="round-btn__icon round-btn__icon--back"></span></button>
-      <button type="button" class="round-btn round-btn--solid" id="stu-next" aria-label="Témoignage suivant"><span class="round-btn__icon"></span></button>
-      <a href="<?php echo esc_url( utalk_url( 'etudiants' ) ); ?>" class="btn-pill">Toutes les histoires <span class="btn-pill__icon" aria-hidden="true"></span></a>
+  <div class="container">
+    <div class="sec-head">
+      <h2 class="section-title">They learned. They practiced. They started <span class="scribble">speaking.</span></h2>
+      <p>Ce que nos élèves disent de leurs cours et du centre.</p>
     </div>
   </div>
 
@@ -204,6 +190,12 @@ get_header();
       </div>
     </li>
   </ul>
+
+  <div class="container sec-foot stu__nav">
+    <button type="button" class="round-btn" id="stu-prev" aria-label="Témoignage précédent"><span class="round-btn__icon round-btn__icon--back"></span></button>
+    <button type="button" class="round-btn round-btn--solid" id="stu-next" aria-label="Témoignage suivant"><span class="round-btn__icon"></span></button>
+    <a href="<?php echo esc_url( utalk_url( 'etudiants' ) ); ?>" class="btn-pill">Toutes les histoires <span class="btn-pill__icon" aria-hidden="true"></span></a>
+  </div>
 </section>
 
 <!-- ============ CTA PANEL (ref: BrightMind "Take the First Step") ============ -->

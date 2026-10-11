@@ -21,7 +21,7 @@
         <li><a href="<?php echo esc_url( utalk_url( '' ) ); ?>" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 3c.3 2.3 1.6 3.7 3.9 3.9v2.6c-1.4.1-2.6-.3-3.9-1.1v5.3c0 6.7-7.3 8.8-10.2 4-1.9-3.1-.7-8.5 5.4-8.7v2.8c-.5.1-1 .2-1.4.4-1.4.5-2.2 1.3-2 2.9.4 3 5.9 3.9 5.4-2V3z"/></svg></a></li>
         <li><a href="<?php echo esc_url( utalk_url( '' ) ); ?>" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3z"/></svg></a></li>
       </ul>
-      <a href="<?php echo esc_url( utalk_url( '', '#contact' ) ); ?>" class="btn btn--primary">Commencer <span aria-hidden="true">→</span></a>
+      <a href="<?php echo esc_url( utalk_url( '', '#contact' ) ); ?>" class="btn btn--primary">Commencer</a>
     </div>
 
     <nav class="footer__col" aria-label="Pied de page">
@@ -44,6 +44,10 @@
       <a href="<?php echo esc_url( utalk_url( 'langues/deutsch' ) ); ?>">Deutsch</a>
       <a href="<?php echo esc_url( utalk_url( 'langues/espanol' ) ); ?>">Español</a>
       <a href="<?php echo esc_url( utalk_url( 'langues/italiano' ) ); ?>">Italiano</a>
+      <a href="<?php echo esc_url( utalk_url( 'langues/turc' ) ); ?>" lang="tr">Türkçe</a>
+      <a href="<?php echo esc_url( utalk_url( 'langues/russe' ) ); ?>" lang="ru">Русский</a>
+      <a href="<?php echo esc_url( utalk_url( 'langues/coreen' ) ); ?>" lang="ko">한국어</a>
+      <a href="<?php echo esc_url( utalk_url( 'langues/chinois' ) ); ?>" lang="zh">中文</a>
     </div>
 
     <div class="footer__col">
